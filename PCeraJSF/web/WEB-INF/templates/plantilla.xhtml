@@ -15,32 +15,34 @@
     </h:head>
 
     <h:body>
-        <table>
+        <table id="tabla-contenido-plantilla">
             <tr>
-                <div>
-                    <div id="navbar">
-                        <h:form id="menu">
-                            <ul class="menulist">
-                                <li><h:commandLink action="#{controlInicio.clickLinkInicio()}" value="Inicio"/></li>
-                                <li><h:commandLink action="#{controlInicio.clickLinkInformacion()}" value="Información"/></li>
-                                <li><h:commandLink action="#{controlInicio.clickLinkApuntate()}" value="Apuntate"/></li>
-                                <c:if test="#{empty controlInicio.usuario}">
-                                    <li><h:commandLink action="#{controlInicio.clickLinkLogin()}" value="Inicio de Sesión"/></li>
-                                </c:if>
-                                <c:if test="#{!empty controlInicio.usuario}">
-                                    <li><h:commandLink action="#{controlInicio.clickLinkPerfil()}" value="Perfil"/></li>
-                                </c:if>
-                            </ul>
-                        </h:form>
-                    </div>
+                <td>
                     <div>
-                        <img src="foto39SantoAngel.png" id="img-santo-angel"/>
+                        <div id="navbar">
+                            <h:form>
+                                <ul class="menulist">
+                                    <li><h:commandLink action="#{controlInicio.clickLinkInicio()}" value="Inicio"/></li>
+                                    <li><h:commandLink action="#{controlInicio.clickLinkInformacion()}" value="Información"/></li>
+                                    <li><h:commandLink action="#{controlInicio.clickLinkApuntate()}" value="Apuntate"/></li>
+                                    <c:if test="#{empty controlInicio.usuario}">
+                                        <li><h:commandLink action="#{controlInicio.clickLinkLogin()}" value="Inicio de Sesión"/></li>
+                                    </c:if>
+                                    <c:if test="#{!empty controlInicio.usuario}">
+                                        <li><h:commandLink action="#{controlInicio.clickLinkPerfil()}" value="Perfil"/></li>
+                                    </c:if>
+                                </ul>
+                            </h:form>
+                        </div>
+                        <div>
+                            <img src="foto39SantoAngel.png" id="img-santo-angel"/>
+                        </div>
                     </div>
-                </div>
+                </td>
             </tr>
             <tr>
                 <td>
-                    <div id="div-contenido">
+                    <div>
                         <ui:insert name="contenido">
                             <h2>Inicio</h2>
                             <p>
@@ -63,7 +65,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Grupo Scout 39 Santo Angel - Málaga</td>
+                <td id="footer">Grupo Scout 39 Santo Angel - Málaga</td>
             </tr>
         </table>
     </h:body>    
