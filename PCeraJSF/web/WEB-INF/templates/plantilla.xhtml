@@ -21,11 +21,11 @@
                     <div id="navbar">
                         <h:form id="menu">
                             <ul class="menulist">
-                                <li><h:commandLink action="#{controlInicio.home()}" value="Inicio"/></li>
+                                <li><h:commandLink action="#{controlInicio.clickLinkInicio()}" value="Inicio"/></li>
                                 <li><h:commandLink action="#{controlInicio.clickLinkInformacion()}" value="Información"/></li>
                                 <li><h:commandLink action="#{controlInicio.clickLinkApuntate()}" value="Apuntate"/></li>
                                 <c:if test="#{empty controlInicio.usuario}">
-                                    <li><h:commandLink action="#{controlInicio.logout()}" value="Inicio de Sesión"/></li>
+                                    <li><h:commandLink action="#{controlInicio.clickLinkLogin()}" value="Inicio de Sesión"/></li>
                                 </c:if>
                                 <c:if test="#{!empty controlAutorizacion.usuario}">
                                     <li><h:commandLink action="#{controlInicio.logout()}" value="Perfil"/></li>

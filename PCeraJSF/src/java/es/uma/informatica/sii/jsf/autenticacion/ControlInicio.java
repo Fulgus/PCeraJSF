@@ -38,7 +38,7 @@ public class ControlInicio implements Serializable {
         return "apuntate.xhtml";
     }
     
-    public String home() {
+    public String clickLinkInicio() {
         // Implementar el método
         // Devuelve la página Home dependiendo del rol del usuario
         // Si no hay usuario debe devolver la página de login
@@ -46,6 +46,10 @@ public class ControlInicio implements Serializable {
         // Si el usuario es un usuario normal debe devolver la página normal.xhtml
         
         return "index.xhtml";
+    }
+    
+    public String clickLinkLogin(){
+        return "inicioSesion.xhtml";
     }
     
     public String logout()
