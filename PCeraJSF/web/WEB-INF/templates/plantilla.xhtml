@@ -9,43 +9,62 @@
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
-        <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
         <title>
             <ui:insert name="title">Inicio</ui:insert>
         </title>
     </h:head>
 
     <h:body>
-        <div id="div-cabecera">
-            <ui:insert name="cabecera">
-                <div id="navbar">
-                    <h:form id="menu">
-                        <ul class="menulist">
-
-                            <li><h:commandLink action="#{controlInicio.home()}" value="Inicio"/></li>
-                            <li><h:commandLink action="#{controlInicio.clickLinkInformacion()}" value="Información"/></li>
-                            <li><h:commandLink action="#{controlInicio.clickLinkApuntate()}" value="Apuntate"/></li>
-                            <c:if test="#{empty controlInicio.usuario}">
-                                <li><h:commandLink action="#{controlInicio.logout()}" value="Inicio de Sesión"/></li>
-                            </c:if>
-                            <c:if test="#{!empty controlAutorizacion.usuario}">
-                                <li><h:commandLink action="#{controlInicio.logout()}" value="Perfil"/></li>
-                            </c:if>
-
-                        </ul>
+        <table>
+            <tr>
+                <div>
+                    <div id="navbar">
+                        <h:form id="menu">
+                            <ul class="menulist">
+                                <li><h:commandLink action="#{controlInicio.home()}" value="Inicio"/></li>
+                                <li><h:commandLink action="#{controlInicio.clickLinkInformacion()}" value="Información"/></li>
+                                <li><h:commandLink action="#{controlInicio.clickLinkApuntate()}" value="Apuntate"/></li>
+                                <c:if test="#{empty controlInicio.usuario}">
+                                    <li><h:commandLink action="#{controlInicio.logout()}" value="Inicio de Sesión"/></li>
+                                </c:if>
+                                <c:if test="#{!empty controlAutorizacion.usuario}">
+                                    <li><h:commandLink action="#{controlInicio.logout()}" value="Perfil"/></li>
+                                </c:if>
+                            </ul>
+                        </h:form>
+                    </div>
+                    <div>
                         <img src="foto39SantoAngel.png" id="img-santo-angel"/>
-                    </h:form>
+                    </div>
                 </div>
-            </ui:insert>
-        </div>
-        <!--Fin del navbar-->
-        <div id="div-contenido">
-            <ui:insert name="contenido">
-                HAY QUE PONER AQUI EL CONTENIDO POR DEFECTO
-            </ui:insert>
-        </div>
+            </tr>
+            <tr>
+                <td>
+                    <div id="div-contenido">
+                        <ui:insert name="contenido">
+                            <h2>Inicio</h2>
+                            <p>
+                                El Grupo Scout 39 Santo Ángel está formado actualmente por unos cincuenta chicos y chicas
+                                que, junto a sus scouters, se reúnen cada fin de semana para dejar el mundo mejor que lo
+                                encontraron. Es el más antiguo de Andalucía (fue creado en 1962) y se integra,
+                                junto a otros muchos grupos, en Scouts de Andalucía. Así que, como podéis imaginar,
+                                tiene una larga historia durante la cual ha ido cambiando de sede
+                                (pasamos muchos años en el bajo de la Parroquia de Santo Ángel)
+                                hasta establecernos en el Colegio Guadaljaire, con unas instalaciones y una 
+                                predisposición magnífica para el trabajo de un grupo scout.
 
-
-    </h:body>
-
+                                La pañoleta del Grupo 39 es azul y blanca.  Actualmente, el Grupo está compuesto por 
+                                cuatro secciones: la Manada de Tha, la Tropa de Kim, la Unidad Esculta Siryu y 
+                                el Clan Rover Almogama.  Somos un grupo relativamente pequeño y todas las secciones están
+                                muy unidas.
+                            </p>
+                        </ui:insert>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Grupo Scout 39 Santo Angel - Málaga</td>
+            </tr>
+        </table>
+    </h:body>    
 </html>

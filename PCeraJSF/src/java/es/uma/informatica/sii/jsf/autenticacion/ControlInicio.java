@@ -45,7 +45,7 @@ public class ControlInicio implements Serializable {
         // Si el usuario es el administrador debe devolver la página admin.xhtml
         // Si el usuario es un usuario normal debe devolver la página normal.xhtml
         
-        return null;
+        return "index.xhtml";
     }
     
     public String logout()
