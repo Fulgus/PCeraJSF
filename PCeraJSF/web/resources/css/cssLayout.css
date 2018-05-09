@@ -32,3 +32,21 @@ ul.menulist li {
     height: auto;
     width: 100%;
 }
+
+#tabla-contenido-plantilla{
+    /*ARREGLAR LOS BORDES BLANCOS AQUI*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+#footer{
+    background-color: #8702B9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
