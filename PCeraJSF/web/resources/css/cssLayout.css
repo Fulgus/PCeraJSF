@@ -35,6 +35,7 @@ ul.menulist li {
 
 #tabla-contenido-plantilla{
     /*ARREGLAR LOS BORDES BLANCOS AQUI*/
+    margin: 0;
     left: 0;
     top: 0;
     right: 0;
@@ -42,9 +43,11 @@ ul.menulist li {
 }
 
 #footer{
+    
     background-color: #8702B9;
     bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
+    position: fixed;
 }
