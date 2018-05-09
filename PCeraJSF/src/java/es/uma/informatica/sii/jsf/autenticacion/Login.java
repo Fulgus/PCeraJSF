@@ -6,7 +6,9 @@ package es.uma.informatica.sii.jsf.autenticacion;
 
 import es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario;
 import es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario.Rol;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
@@ -55,9 +57,33 @@ public class Login {
     }
 
     public String autenticar() {
-        // Implementar este método
-        FacesContext ctx = FacesContext.getCurrentInstance();
-        ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "El método autenticar() no está implementado", "El método autenticar() no está implementado"));
-        return null;
+        // Implementar este mÃ©todo
+        Iterator it = usuarios.iterator();
+        boolean encontrado = false;
+        Usuario user = null;
+        while(it.hasNext() && !encontrado){
+            user = (Usuario) it.next();
+            if(user.getUsuario().equals(usuario))
+                encontrado = true;    
+        }
+        if(user!=null){
+             if(user.getContrasenia().equals(contrasenia)){
+                 ctrl.setUsuario(user);
+                 return ctrl.clickLinkInicio();      
+            }else if (!user.getContrasenia().equals(contrasenia)){
+                FacesContext ctx = FacesContext.getCurrentInstance();
+                ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "ContraseÃ±a no valida", "ContraseÃ±a no valida"));
+                return null;
+            }else{
+                FacesContext ctx = FacesContext.getCurrentInstance();
+                ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario no valido", "Usuario no valido"));
+                return null;
+            }
+        
+        
+        }else{
+            return null;   
+        }   
     }
-}
+}  
+

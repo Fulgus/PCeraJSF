@@ -27,8 +27,8 @@
                                 <c:if test="#{empty controlInicio.usuario}">
                                     <li><h:commandLink action="#{controlInicio.clickLinkLogin()}" value="Inicio de Sesión"/></li>
                                 </c:if>
-                                <c:if test="#{!empty controlAutorizacion.usuario}">
-                                    <li><h:commandLink action="#{controlInicio.logout()}" value="Perfil"/></li>
+                                <c:if test="#{!empty controlInicio.usuario}">
+                                    <li><h:commandLink action="#{controlInicio.clickLinkPerfil()}" value="Perfil"/></li>
                                 </c:if>
                             </ul>
                         </h:form>

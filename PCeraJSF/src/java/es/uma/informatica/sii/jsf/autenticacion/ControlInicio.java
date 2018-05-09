@@ -52,6 +52,10 @@ public class ControlInicio implements Serializable {
         return "inicioSesion.xhtml";
     }
     
+    public String clickLinkPerfil(){
+        return "perfil.xhtml";
+    }
+    
     public String logout()
     {
         // Destruye la sesión (y con ello, el ámbito de este bean)
