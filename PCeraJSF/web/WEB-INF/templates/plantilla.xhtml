@@ -31,6 +31,7 @@
                                     <c:if test="#{!empty controlInicio.usuario}">
                                         <li><h:commandLink action="#{controlInicio.clickLinkPerfil()}" value="Perfil"/></li>
                                     </c:if>
+                                    <li><h:commandLink action="#{controlInicio.clickLinkCuota()}" value="Cuota"/></li>
                                 </ul>
                             </h:form>
                         </div>
@@ -44,22 +45,6 @@
                 <td>
                     <div>
                         <ui:insert name="contenido">
-                            <h2>Inicio</h2>
-                            <p>
-                                El Grupo Scout 39 Santo Ángel está formado actualmente por unos cincuenta chicos y chicas
-                                que, junto a sus scouters, se reúnen cada fin de semana para dejar el mundo mejor que lo
-                                encontraron. Es el más antiguo de Andalucía (fue creado en 1962) y se integra,
-                                junto a otros muchos grupos, en Scouts de Andalucía. Así que, como podéis imaginar,
-                                tiene una larga historia durante la cual ha ido cambiando de sede
-                                (pasamos muchos años en el bajo de la Parroquia de Santo Ángel)
-                                hasta establecernos en el Colegio Guadaljaire, con unas instalaciones y una 
-                                predisposición magnífica para el trabajo de un grupo scout.
-
-                                La pañoleta del Grupo 39 es azul y blanca.  Actualmente, el Grupo está compuesto por 
-                                cuatro secciones: la Manada de Tha, la Tropa de Kim, la Unidad Esculta Siryu y 
-                                el Clan Rover Almogama.  Somos un grupo relativamente pequeño y todas las secciones están
-                                muy unidas.
-                            </p>
                         </ui:insert>
                     </div>
                 </td>
