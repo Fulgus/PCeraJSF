@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    
+    <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
+        <ui:define name="title">Evento
+        </ui:define>
+        <ui:define name="contenido">
+            <table align="center" >
+                   
+                        <tr>
+                            <td><h4>Nombre del evento: #{eventoBean.getSeleccionado().getNombre()}</h4> </td>
+                            
+                        </tr>
+                        <tr>
+                            <td><h4>Ubicacion: #{eventoBean.getSeleccionado().getLugar()}</h4></td>
+                        </tr>
+                        <tr>
+                            <td><h4>Precio: #{eventoBean.getSeleccionado().getPrecio()}</h4></td>
+                        </tr>
+                
+                         <tr>
+                             <td><h4>Seccion:  #{eventoBean.getSeleccionado().getSeccion()}</h4></td>
+                        </tr>
+                
+                        
+                         <tr>
+                             <td><h4>Descripcion #{eventoBean.getSeleccionado().getDescripcion()}</h4></td>
+                        </tr>
+                    </table>
+   
+
+
+    </ui:define>
+    </ui:composition>
+</html>
+
