@@ -52,9 +52,9 @@ body{
 }
 
 #navbar a:link, #top a:visited {
-  color: white;
-  font-weight : bold;
-  text-decoration: none;
+    color: white;
+    font-weight : bold;
+    text-decoration: none;
 }
 
 #navbar a:hover {
@@ -75,4 +75,14 @@ ul.menulist li {
     width: 100%;
     position: absolute;
     z-index: 1;
+}
+
+#div-contenido{
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 20px;
+    height: 100px;
+    border: 3px solid #73AD21;
+    background-color: red;
 }
