@@ -68,6 +68,7 @@ ul.menulist li {
 }
 
 #img-santo-angel{
+    align-content: center;
     padding: 0;
     margin: 0;
     max-width: 100%;
@@ -77,12 +78,15 @@ ul.menulist li {
     z-index: 1;
 }
 
+#div-cabecera{
+    align-content: center;
+    margin: auto;
+}
+
 #div-contenido{
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 20px;
-    height: 100px;
-    border: 3px solid #73AD21;
+    alignment-adjust: auto;
+    padding: 0;
+    margin: 0;
+    margin-top: 282px;
     background-color: red;
 }
