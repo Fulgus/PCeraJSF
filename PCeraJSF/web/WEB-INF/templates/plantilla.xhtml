@@ -11,30 +11,27 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
         <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
         <title>
-            <ui:insert name="title">Facelets Template</ui:insert>
+            <ui:insert name="title">Inicio</ui:insert>
         </title>
     </h:head>
 
     <h:body>
-        <div id="top" class="top">
+        <div id="navbar">
             <h:form id="menu">
                 <ul class="menulist">
 
-                    <li><h:commandLink action="#{controlAutorizacion.home()}" value="Inicio"/></li>
-                    <li><h:commandLink action="#{controlAutorizacion.logout()}" value="Información"/></li>
-                    <li><h:commandLink action="#{controlAutorizacion.home()}" value="Apuntate"/></li>
-                    <c:if test="#{empty controlAutorizacion.usuario}">
-                        <li><h:commandLink action="#{controlAutorizacion.logout()}" value="Inicio de Sesión"/></li>
+                    <li><h:commandLink action="#{controlInicio.home()}" value="Inicio"/></li>
+                    <li><h:commandLink action="#{controlInicio.clickLinkInformacion()}" value="Información"/></li>
+                    <li><h:commandLink action="#{controlInicio.clickLinkApuntate()}" value="Apuntate"/></li>
+                    <c:if test="#{empty controlInicio.usuario}">
+                        <li><h:commandLink action="#{controlInicio.logout()}" value="Inicio de Sesión"/></li>
                     </c:if>
                     <c:if test="#{!empty controlAutorizacion.usuario}">
-                        <li><h:commandLink action="#{controlAutorizacion.logout()}" value="Perfil"/></li>
+                        <li><h:commandLink action="#{controlInicio.logout()}" value="Perfil"/></li>
                     </c:if>
 
                 </ul>
-                <ul>
-                    <img src="foto39SantoAngel.PNG" width="1800" height="400" align="left" margin-left="0" padding="0"/>
-
-                </ul>
+                <img src="foto39SantoAngel.PNG" id="img-santo-angel"/>
             </h:form>
         </div>
 

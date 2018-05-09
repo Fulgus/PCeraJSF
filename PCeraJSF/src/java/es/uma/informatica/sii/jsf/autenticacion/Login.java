@@ -27,7 +27,7 @@ public class Login {
     private List<Usuario> usuarios;
     
     @Inject
-    private ControlAutorizacion ctrl;
+    private ControlInicio ctrl;
 
     /**
      * Creates a new instance of Login

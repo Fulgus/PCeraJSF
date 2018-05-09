@@ -1,4 +1,4 @@
-#top {
+#navbar {
     font-family: Ubuntu;
     position: relative;
     background-color: #8702B9;
@@ -47,18 +47,26 @@
     margin: 0px 170px 0px 170px;
 }
 
-#top a:link, #top a:visited {
+#navbar a:link, #top a:visited {
   color: white;
   font-weight : bold;
   text-decoration: none;
 }
 
-#top a:hover {
-    color: #00FBFF;
+#navbar a:hover {
+    color: greenyellow;
 }
 
 ul.menulist li {
     list-style: none;
     display:inline;
     margin: 1em;
+}
+
+#img-santo-angel{
+    padding: 0;
+    margin: 2px 0px 0px 0px;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
 }

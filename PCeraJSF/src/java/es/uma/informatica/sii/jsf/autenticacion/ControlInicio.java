@@ -16,9 +16,9 @@ import javax.faces.context.FacesContext;
  *
  * @author francis
  */
-@Named(value = "controlAutorizacion")
+@Named(value = "controlInicio")
 @SessionScoped
-public class ControlAutorizacion implements Serializable {
+public class ControlInicio implements Serializable {
 
     private Usuario usuario;
 
@@ -30,6 +30,14 @@ public class ControlAutorizacion implements Serializable {
         return usuario;
     }
 
+    public String clickLinkInformacion(){
+        return "informacion.xhtml";
+    }
+    
+    public String clickLinkApuntate(){
+        return "apuntate.xhtml";
+    }
+    
     public String home() {
         // Implementar el método
         // Devuelve la página Home dependiendo del rol del usuario
@@ -52,6 +60,6 @@ public class ControlAutorizacion implements Serializable {
     /**
      * Creates a new instance of ControlAutorizacion
      */
-    public ControlAutorizacion() {
+    public ControlInicio() {
     }
 }
