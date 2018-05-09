@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    
+    <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
+        <ui:define name="title">Pagar Cuota</ui:define>
+        <ui:define name="contenido">
+            <h1>Pagar Cuota</h1>
+            <h2>Precio  : X€</h2>
+            <h2>Metodo de pago</h2>
+            <input type="radio" name="tiempo" value="0-2"> Efectivo</input>
+            <input type="radio" name="tiempo" value="2-5"> Tarjeta de credito</input>
+            <input type="radio" name="tiempo" value="5-"> Transferencia</input>
+            <input type="radio" name="tiempo" value="0-2"> PayPal</input>
+            <p> Si el pago es a través de transferencia adjuntar el resguardo aquí</p>
+            <table border="0">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr><td><a	href= "http://www.eluniversal.com.mx/sites/default/files/u17566/4.jpeg" ><img width ="18" src = "https://image.freepik.com/iconos-gratis/line-clip-de-sujecion_318-25320.jpg"></img></a></td><td><input type="text" maxlength="50" size="60" name="lenguaje"></input></td></tr>
+                </tbody>
+            </table>
+        </ui:define>
+    </ui:composition>
+</html>
