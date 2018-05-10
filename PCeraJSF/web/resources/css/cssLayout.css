@@ -64,6 +64,7 @@ ul.menulist li {
 }
 
 #tabla-contenido-plantilla{
+    font-family: Ubuntu;
     margin: 0;
     left: 0;
     top: 0;
@@ -97,7 +98,47 @@ ul.menulist li {
     left: 33.5%;
 }
 
+.ColorBoton{
+  display: inline-block;
+  padding: 10px 17px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #8702B9;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
+}
+
+.ColorBoton:hover {background-color: #3e8e41}
+
+.ColorBoton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 6px #666;
+  transform: translateY(4px);
+}
+
 #fotoperfil{
-    width: 30%;
-    height: 10%;
+    width: 50%;
+    height: 50%;
+}
+
+#boton-aniadir-user{
+   text-align: center;
+}
+
+.tabla-gest-user th, .tabla-gest-user td{
+    border: 1px solid black;
+}
+
+.tabla-gest-user table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#radio-privilegios{
+    margin: 10px 10px 0px 0px;
 }
