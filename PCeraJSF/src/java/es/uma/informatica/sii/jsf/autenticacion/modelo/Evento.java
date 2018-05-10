@@ -65,7 +65,7 @@ public class Evento implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getUbicacon() {
+    public String getLugar() {
         return ubicacon;
     }
 
