@@ -24,12 +24,12 @@ public class EventoBean {
     private Integer cont = 0;
 
     private String nombre;
-    private String ubicacion;
+    private String lugar;
     private Seccion seccion;
     private String descripcion;
     private Integer precio;
     private List<Evento> ev = new ArrayList<>();
-    private List<Usuario> usuarioCollection;
+    private List<Usuario> usuarioCollection = new ArrayList<>();
     private static Evento seleccionado;
 
     /**
@@ -46,7 +46,7 @@ public class EventoBean {
         aux.setNombre(nombre);
         aux.setPrecio(precio);
         aux.setSeccion(getSeccion());
-        aux.setUbicacon(ubicacion);
+        aux.setUbicacon(lugar);
         aux.setUsuarioCollection(usuarioCollection);
         aux.setIdEvento(seleccionado.getIdEvento());
 
@@ -91,11 +91,11 @@ public class EventoBean {
     }
 
     public String getLugar() {
-        return seleccionado.getUbicacon();
+        return lugar;
     }
 
-    public void setLugar(String ubicacion) {
-        this.ubicacion = ubicacion;
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
     }
 
     //public Date getFecha() {
@@ -106,7 +106,7 @@ public class EventoBean {
         this.fecha = fecha;
     }
      */
-    public float getPrecio() {
+    public Integer getPrecio() {
         return precio;
     }
 
@@ -155,8 +155,8 @@ public class EventoBean {
         aux.setIdEvento(cont);
         aux.setNombre(nombre);
         aux.setSeccion(seccion);
-        aux.setUbicacon(ubicacion);
-        aux.setUsuarioCollection(usuarioCollection);
+        aux.setUbicacon(lugar);
+     //   aux.setUsuarioCollection(usuarioCollection);
 
         // aux.setImagen(imagen);
         setSeleccionado(aux);
