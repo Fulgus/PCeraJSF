@@ -1,3 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+td{
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+}
+
+tr{
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+}
+
+li.sesion{
+    float: right;
+    display: inline;
+    margin: 0px 0px 10px 0px;
+    padding: 0;
+    height: 0;
+    border-bottom: 0;
+    position: relative;
+    top: -15px;
+}
+
 #navbar {
     font-family: Ubuntu;
     position: relative;
@@ -34,16 +64,18 @@ ul.menulist li {
 }
 
 #tabla-contenido-plantilla{
-    /*ARREGLAR LOS BORDES BLANCOS AQUI*/
     margin: 0;
     left: 0;
     top: 0;
     right: 0;
     width: 100%;
+    border: none;
+    padding: 0;
+    border-spacing: 0;
 }
 
-#footer{
-    
+#footer{ 
+   font-family: Ubuntu;
     background-color: #8702B9;
     bottom: 0;
     width: 100%;

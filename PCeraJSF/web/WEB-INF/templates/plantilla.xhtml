@@ -26,10 +26,10 @@
                                     <li><h:commandLink action="#{controlInicio.clickLinkInformacion()}" value="Información"/></li>
                                     <li><h:commandLink action="#{controlInicio.clickLinkApuntate()}" value="Apuntate"/></li>
                                     <c:if test="#{empty controlInicio.usuario}">
-                                        <li><h:commandLink action="#{controlInicio.clickLinkLogin()}" value="Inicio de Sesión"/></li>
+                                        <li class="sesion"><h:commandLink action="#{controlInicio.clickLinkLogin()}" value="Inicio de Sesión"/></li>
                                     </c:if>
                                     <c:if test="#{!empty controlInicio.usuario}">
-                                        <li><h:commandLink action="#{controlInicio.clickLinkPerfil()}" value="Perfil"/></li>
+                                        <li class="sesion"><h:commandLink action="#{controlInicio.clickLinkPerfil()}" value="Perfil"/></li>
                                     </c:if>
                                     <li><h:commandLink action="#{controlInicio.clickLinkCuota()}" value="Cuota"/></li>
                                 </ul>
