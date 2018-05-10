@@ -15,35 +15,38 @@
                         <p:growl id="msgs" showDetail="true" />
                         <table align="center">
 
-                            <tr>
+                          <tr>
                                 <td><h4>Nombre evento:</h4></td>
                             </tr>
+    
                             <tr>
                                 <td><p:inputText id="Nombre_evento" required="true" value="#{eventoBean.nombre}"/></td>
                             </tr>
-
+         
                             <tr>
                                 <td><h4>Lugar:</h4></td>
                             </tr>
+                            
                             <tr>
-                                <td><p:inputText id="Lugar" value="#{eventoBean.getLugar()}"/></td>
+                                <td><p:inputText  value="#{eventoBean.lugar}"/></td>
                             </tr> 
+                            
+                     
                             <tr>
                                 <td><h4>Precio:</h4></td>
                             </tr>
                             <tr>
-                                <td><p:inputNumber id="Precio" required="true" value="#{eventoBean.getPrecio()}"/></td>
+                                <td><p:inputNumber id="Precio" required="true" value="#{eventoBean.precio}"/></td>
                             </tr>
-                           
+                              
 
                             <tr>
                                 <td><h4>Descripción del evento:</h4></td>
                             </tr>
                             <tr>
-                                <td><p:inputTextarea id="Descripción" rows="10" cols="50"  queryDelay="750" minQueryLength="4" value="#{eventoBean.getDescripcion()}" /></td>
+                                <td><p:inputTextarea id="Descripción" rows="10" cols="50"  queryDelay="750" minQueryLength="4" value="#{eventoBean.descripcion}" /></td>
                             </tr>
                            
-                          
                             <tr>                   
                                 <td><h:commandButton value="Subir" action="#{eventoBean.enviarEvento()}"></h:commandButton></td>
                             </tr>
