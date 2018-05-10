@@ -110,7 +110,7 @@ public class EventoBean {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(Integer precio) {
         this.precio = precio;
     }
 
@@ -155,6 +155,7 @@ public class EventoBean {
         aux.setIdEvento(cont);
         aux.setNombre(nombre);
         aux.setSeccion(seccion);
+        aux.setPrecio(precio);
         aux.setUbicacon(lugar);
      //   aux.setUsuarioCollection(usuarioCollection);
 
