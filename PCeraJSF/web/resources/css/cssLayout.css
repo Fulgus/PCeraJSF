@@ -75,11 +75,24 @@ ul.menulist li {
 }
 
 #footer{ 
-   font-family: Ubuntu;
+    font-family: Ubuntu;
     background-color: #8702B9;
     bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
     position: fixed;
+}
+
+#PagCuo_CenTxt{
+    text-align: center;
+}
+
+#PagCuo_MovTi{
+    padding-left: 20%;
+}
+
+#PagCuo_CenRd{
+    position: relative;
+    left: 33.5%;
 }
