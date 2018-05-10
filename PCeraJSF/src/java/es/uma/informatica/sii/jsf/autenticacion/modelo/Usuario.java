@@ -58,8 +58,10 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Integer idUsuario) {
+    public Usuario(Integer idUsuario, String usuario, String contrasenia) {
         this.idUsuario = idUsuario;
+        this.usuario = usuario;
+        this.contraseña = contrasenia;
     }
 
     public Integer getIdUsuario() {
@@ -70,6 +72,7 @@ public class Usuario implements Serializable {
         this.idUsuario = idUsuario;
     }
 
+    
     public String getNombre() {
         return nombre;
     }
@@ -186,11 +189,11 @@ public class Usuario implements Serializable {
         this.usuario = usuario;
     }
 
-    public String getContraseña() {
+    public String getContrasenia() {
         return contraseña;
     }
 
-    public void setContraseña(String contraseña) {
+    public void setContrasenia(String contraseña) {
         this.contraseña = contraseña;
     }
 
