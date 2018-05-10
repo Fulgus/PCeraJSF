@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
+        <ui:define name="title">Gestión Cuota</ui:define>
+        <ui:define name="contenido">
+            <a	href= "perfil-coordinador.xhtml" ><img id="foto_cerrar_pest" src = "Close_Box_Red.png"></img></a>
+            <h1 align="center">Cuotas</h1>
+            <div>
+                <table style="padding-left:  30%">
+                    <tr><td style="border: solid 1px black;padding: 5px">Cuota actual: x€/año</td>
+                        <td style="padding-left:  70%"><h:button class="ColorBoton" outcome="perfil-coordinador.xhtml" value="Crear cuotas"></h:button></td></tr>
+                </table>
+            </div>
+            <br />
+            <table class="tableGestCuo" align="center">
+                 <thead>
+                     <tr class="trGC"><th class="thGC">Año</th><th class="thGC">Personas</th><th class="thGC"></th><th class="thGC">Precio</th></tr>
+                 </thead>
+                <body>
+                    <tr class="trGC"><td class="tdGC">2014</td><td class="tdGC">37/40</td><td class="tdGC"><a href="perfil-coordinador.xhtml">Ver</a></td><td class="tdGC">x€</td></tr>
+                    <tr class="trGC2"><td class="tdGC">2015</td><td class="tdGC">34/34</td><td class="tdGC" ><a href="perfil-coordinador.xhtml">Ver</a></td><td class="tdGC">x€</td></tr>
+                    <tr class="trGC"><td class="tdGC">2016</td><td class="tdGC">37/45</td><td class="tdGC"><a href="perfil-coordinador.xhtml">Ver</a></td><td class="tdGC">x€</td></tr>
+                    <tr class="trGC2"><td class="tdGC">2017</td><td class="tdGC">40/40</td><td class="tdGC"><a href="perfil-coordinador.xhtml">Ver</a></td><td class="tdGC">x€</td></tr>
+                    <tr class="trGC"><td class="tdGC">2018</td><td class="tdGC">1/24</td><td class="tdGC"><a href="perfil-coordinador.xhtml">Ver</a></td><td class="tdGC">x€</td></tr>
+                </body>
+            </table>
+            <br/><br/><br/>
+        </ui:define>
+    </ui:composition>
+</html>

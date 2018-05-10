@@ -94,8 +94,7 @@ ul.menulist li {
 }
 
 #PagCuo_CenRd{
-    position: relative;
-    left: 33.5%;
+    padding-left: 33.5%;
 }
 
 .ColorBoton{
@@ -141,4 +140,42 @@ ul.menulist li {
 
 #radio-privilegios{
     margin: 10px 10px 0px 0px;
+}
+
+/*GC = Gestionar Cuota*/
+.thGC{
+  background-color: green;
+  color: white;
+  font-weight: normal;
+
+}
+
+.tableGestCuo {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+.tableGestCuo, .thGC, .tdGC {
+  border: 1px solid green;
+}
+
+.tdGC, .thGC {
+  padding: 0.3em;
+  height:30px;
+  
+  text-align: center;
+}
+
+.trGC2 {
+  background-color: #ddffdd;
+}
+
+.trGC {
+  background-color: white;
+}
+
+#foto_cerrar_pest{
+    width: 18px;
+    padding-left: 82%;
+
 }

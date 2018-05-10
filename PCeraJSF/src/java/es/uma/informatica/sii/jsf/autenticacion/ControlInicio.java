@@ -55,7 +55,7 @@ public class ControlInicio implements Serializable {
     }
     
     public String clickLinkCuota(){
-        return "PagarCuota.xhtml";
+        return "GestionarCuota.xhtml";
     }
     
     public String logout()
