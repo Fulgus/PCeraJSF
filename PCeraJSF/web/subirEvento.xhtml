@@ -46,11 +46,13 @@
                             <tr>
                                 <td><p:inputTextarea id="Descripción" rows="10" cols="50"  queryDelay="750" minQueryLength="4" value="#{eventoBean.descripcion}" /></td>
                             </tr>
-                           
-                            <tr>                   
-                                <td><h:commandButton value="Subir" action="#{eventoBean.enviarEvento()}"></h:commandButton></td>
-                            </tr>
                         </table>
+                        <br/>
+                            <table style="padding-left:  40%">
+                            <tr><td><h:button class="ColorBoton" outcome="evento.xhtml" value="Subir"></h:button></td>
+                            </tr>
+                            </table>
+            <br/><br/><br/>
                     </h:form>
                
                        
