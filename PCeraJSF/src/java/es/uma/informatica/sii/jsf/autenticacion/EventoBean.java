@@ -25,7 +25,7 @@ public class EventoBean {
 
     private String nombre;
     private String lugar;
-    private Seccion seccion;
+    private String seccion;
     private String descripcion;
     private Integer precio;
     private List<Evento> ev = new ArrayList<>();
@@ -180,14 +180,14 @@ public class EventoBean {
     /**
      * @return the seccion
      */
-    public Seccion getSeccion() {
+    public String getSeccion() {
         return seccion;
     }
 
     /**
      * @param seccion the seccion to set
      */
-    public void setSeccion(Seccion seccion) {
+    public void setSeccion(String seccion) {
         this.seccion = seccion;
     }
 

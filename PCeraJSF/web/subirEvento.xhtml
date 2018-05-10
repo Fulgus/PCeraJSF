@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     
     <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
     <ui:define name="title">Evento</ui:define>
@@ -46,6 +47,20 @@
                             <tr>
                                 <td><p:inputTextarea id="Descripción" rows="10" cols="50"  queryDelay="750" minQueryLength="4" value="#{eventoBean.descripcion}" /></td>
                             </tr>
+                            
+                            <tr>
+                                <td><h4>Seccion:</h4></td>
+                            </tr>
+                            <tr>
+                                <td> <h:selectOneRadio id="Seccion" required="true" value="#{eventoBean.seccion}">
+                                        <f:selectItem itemValue="Castores" itemLabel="Castores"/>   
+                                        <f:selectItem itemValue="Manada" itemLabel="Manada" />
+                                        <f:selectItem itemValue="Tropa" itemLabel="Tropa" />
+                                        <f:selectItem itemValue="Unidad" itemLabel="Unidad" />
+                                        <f:selectItem itemValue="Clan" itemLabel="Clan" />
+                                    </h:selectOneRadio></td>
+                            </tr>
+                            
                         </table>
                         <br/>
                             <table style="padding-left:  40%">
