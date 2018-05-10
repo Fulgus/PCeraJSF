@@ -5,8 +5,6 @@
 package es.uma.informatica.sii.jsf.autenticacion;
 
 import es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario;
-import static es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario.Rol.ADMINISTRADOR;
-import static es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario.Rol.NORMAL;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;

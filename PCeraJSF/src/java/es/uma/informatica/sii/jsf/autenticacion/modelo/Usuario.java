@@ -1,87 +1,186 @@
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package es.uma.informatica.sii.jsf.autenticacion.modelo;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author francis
+ * @author Boti
  */
 @Entity
 public class Usuario implements Serializable {
     
-    public enum Rol {
-      ADMINISTRADOR,
-      NORMAL
-    };
     
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String usuario;
-    private String contrasenia;
-    @Enumerated(EnumType.STRING)
-    private Rol rol;
-    
-    public Usuario()
-    {
-        
-    }
-    
-    public Usuario (String usuario, String contrasenia, Rol rol)
-    {
-        setUsuario(usuario);
-        setContrasenia(contrasenia);
-        setRol(rol);
+    private Integer idUsuario;
+    private String nombre;
+    private String apellidos;
+    private String dni;
+    @Temporal(TemporalType.DATE)
+    private Date fechaNacimiento;
+    private Integer tipoUsuario;
+    private String email;
+    private String direccion;
+    private String sexo;
+    @Lob
+    @Column(length = 10000)
+    private byte[] fotoPerfil;
+    @ManyToMany(mappedBy = "usuarioCollection")
+    private List<Evento> eventoCollection;
+    @OneToMany(mappedBy = "usuarioIdUsuario")
+    private List<Documento> documentoCollection;
+    @OneToMany(mappedBy = "usuarioIdUsuario")
+    private List<Cuota> cuotaCollection;
+    @OneToMany(mappedBy = "usuario")
+    private List<Promesa> promesaCollection;
+
+    public Usuario() {
     }
 
-    public void setRol(Rol rol) {
-        this.rol = rol;
+    public Usuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public Rol getRol() {
-        return rol;
+    public Integer getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setIdUsuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public void setContrasenia(String contrasenia) {
-        this.contrasenia = contrasenia;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getContrasenia() {
-        return contrasenia;
-    }
-    
-
-    public Long getId() {
-        return id;
+    public String getApellidos() {
+        return apellidos;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Integer getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(Integer tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public byte[] getFotoPerfil() {
+        return fotoPerfil;
+    }
+
+    public void setFotoPerfil(byte[] fotoPerfil) {
+        this.fotoPerfil = fotoPerfil;
+    }
+
+    @XmlTransient
+    public List<Evento> getEventoCollection() {
+        return eventoCollection;
+    }
+
+    public void setEventoCollection(List<Evento> eventoCollection) {
+        this.eventoCollection = eventoCollection;
+    }
+
+    @XmlTransient
+    public List<Documento> getDocumentoCollection() {
+        return documentoCollection;
+    }
+
+    public void setDocumentoCollection(List<Documento> documentoCollection) {
+        this.documentoCollection = documentoCollection;
+    }
+
+    @XmlTransient
+    public List<Cuota> getCuotaCollection() {
+        return cuotaCollection;
+    }
+
+    public void setCuotaCollection(List<Cuota> cuotaCollection) {
+        this.cuotaCollection = cuotaCollection;
+    }
+
+    @XmlTransient
+    public List<Promesa> getPromesaCollection() {
+        return promesaCollection;
+    }
+
+    public void setPromesaCollection(List<Promesa> promesaCollection) {
+        this.promesaCollection = promesaCollection;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (idUsuario != null ? idUsuario.hashCode() : 0);
         return hash;
     }
 
@@ -92,7 +191,7 @@ public class Usuario implements Serializable {
             return false;
         }
         Usuario other = (Usuario) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.idUsuario == null && other.idUsuario != null) || (this.idUsuario != null && !this.idUsuario.equals(other.idUsuario))) {
             return false;
         }
         return true;
@@ -100,7 +199,7 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario[ id=" + id + " ]";
+        return "pkg0entrega1.Usuario[ idUsuario=" + idUsuario + " ]";
     }
-    
+
 }
