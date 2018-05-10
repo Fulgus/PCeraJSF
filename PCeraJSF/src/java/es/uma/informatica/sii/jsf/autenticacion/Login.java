@@ -5,7 +5,6 @@
 package es.uma.informatica.sii.jsf.autenticacion;
 
 import es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario;
-import es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario.Rol;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -36,8 +35,8 @@ public class Login {
      */
     public Login() {
         usuarios = new ArrayList<Usuario>();
-        usuarios.add(new Usuario("pepe", "asdf", Rol.NORMAL));
-        usuarios.add(new Usuario("manolo", "qwer", Rol.ADMINISTRADOR));
+        usuarios.add(new Usuario(1,"pepe", "asdf"));
+        usuarios.add(new Usuario(2,"manolo", "qwer"));
     }
 
     public String getUsuario() {
