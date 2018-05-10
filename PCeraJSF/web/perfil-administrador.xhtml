@@ -11,25 +11,29 @@ and open the template in the editor.
       xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
    <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
-        <ui:define name="title">Perfil Coordinador</ui:define>
+        <ui:define name="title">Perfil Administrador</ui:define>
         <ui:define name="contenido">
              <h1>Perfil</h1>
-             Eres coordinador 
+             Eres administrador 
             <div id="div-perfil"> 
              <table cellspan="5">
                 <tr>
                   <td rowspan="2"><img src="img-profile.png" id="fotoperfil"/></td>
-                  <td>-<h:link value="Gestión de usuarios" outcome="gest-usuarios.xhtml"/></td>
+                  <td>-<h:link value="Asignación de privilegios" outcome="privilegios.xhtml"/></td>
                 </tr>
-                <tr> 
-                  <td>-<h:link value="Gestión de cuotas" outcome="GestionCuota.xhtml"/></td>
+                <tr>
+                  <td>-<h:link value="Gestión de usuarios" outcome="gest-usuarios.xhtml"/></td>
                 </tr>
                 <tr>
                  <td></td>
-                 <td>-<h:link value="Gestión de eventos" outcome="GestionEventos.xhtml"/></td>
+                 <td>-<h:link value="Gestión de cuotas" outcome="GestionCuota.xhtml"/></td>
                 </tr>
                 <tr>
                  <td><h:button class="ColorBoton" value="Cambiar contraseña" outcome="cambiarContrasenia.xhtml"/></td>
+                 <td>-<h:link value="Gestión de eventos" outcome="GestionEventos.xhtml"/></td>
+                </tr>
+                <tr>
+                 <td></td>
                  <td>-<h:link value="Gestión de documentación" outcome="GestionDocumentacion.xhtml"/></td>
                 </tr>
             </table> 

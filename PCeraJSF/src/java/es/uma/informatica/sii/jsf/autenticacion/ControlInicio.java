@@ -51,7 +51,7 @@ public class ControlInicio implements Serializable {
     }
     
     public String clickLinkPerfil(){
-        return "perfil-educando.xhtml"; //Falta controlar el tipo de perfil
+        return "perfil-coordinador.xhtml"; //Falta controlar el tipo de perfil
     }
     
     public String clickLinkCuota(){
