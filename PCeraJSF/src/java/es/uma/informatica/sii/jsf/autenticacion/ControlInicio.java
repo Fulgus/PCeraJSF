@@ -51,18 +51,16 @@ public class ControlInicio implements Serializable {
     }
 
     public String clickLinkPerfil() {
-        if (null == usuario.getTipoUsuario()) {
-            return "inicio.xhtml";
-        } else {
-            switch (usuario.getTipoUsuario()) {
-                case 0:
-                    return "perfil-administrador.xhtml";
-                case 1:
-                    return "perfil-coordinador.xhtml";
-                default:
-                    return "perfil-educando.xhtml";
-            }
+
+        switch (usuario.getTipoUsuario()) {
+            case 0:
+                return "perfil-administrador.xhtml";
+            case 1:
+                return "perfil-coordinador.xhtml";
+            default:
+                return "perfil-educando.xhtml";
         }
+
     }
 
     public String clickLinkCuota() {

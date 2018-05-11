@@ -19,6 +19,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
@@ -27,6 +28,15 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 public class Usuario implements Serializable {
+    
+    @Transient 
+    public static final Integer PERF_ADMIN = 0;
+    @Transient
+    public static final Integer PERF_COORD = 1;
+    @Transient
+    public static final Integer PERF_SCOUTER = 2;
+    @Transient
+    public static final Integer PERF_EDUCANDO = 3;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -39,7 +49,7 @@ public class Usuario implements Serializable {
     private String dni;
     @Temporal(TemporalType.DATE)
     private Date fechaNacimiento;
-    private Integer tipoUsuario;
+    private int tipoUsuario;
     private String email;
     private String direccion;
     private String sexo;
