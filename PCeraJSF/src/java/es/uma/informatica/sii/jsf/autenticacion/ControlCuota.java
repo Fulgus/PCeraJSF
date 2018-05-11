@@ -49,11 +49,22 @@ public class ControlCuota {
     public String btnCrearCrCuota(){
         return "GestionarCuota.xhtml";
     }
-    //Este boton cierra el popup deIRPF
+    //Este metodo controla el cierre del popup de IRPF
     public String btnCerrarIRPF(){
         return "VerCuota.xhtml";
     }
     
+    public String btnEnviarIRPF(){
+        return "EnvioIRPF.xhtml";
+    }
+    
+    public String btnAceptarMetPag(){
+        return "perfil-educando.xhtml";
+    }
+    
+    public String btnAtrasMetPag(){
+        return "perfil-educando.xhtml";
+    }
 }
     
 

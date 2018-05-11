@@ -9,6 +9,7 @@
     <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
         <ui:define name="title">Ver Cuota</ui:define>
         <ui:define name="contenido">
+          <h:form>
             <a	href= "GestionarCuota.xhtml" ><img id="foto_cerrar_pest" src = "Close_Box_Red.png"></img></a>
             <h1 align="center">Listado de cuotas pagadas del año 2014</h1>
             <br />
@@ -17,14 +18,15 @@
                     <tr class="trGC"><th class="thGC">Credencial</th><th class="thGC">Pago</th><th class="thGC">Fecha de Pago</th><th class="thGC">Recibo IRPF</th></tr>
                 </thead>
                 <body>
-                    <tr class="trGC"><td class="tdGC">0000</td><td class="tdGC">Si</td><td class="tdGC">19/02/2014</td><td class="tdGC"><h:button class="ColorBoton" outcome="EnvioIRPF.xhtml" value="enviar"></h:button></td></tr>
-                    <tr class="trGC2"><td class="tdGC">0001</td><td class="tdGC">No</td><td class="tdGC" >-</td><td class="tdGC"><h:button class="ColorBoton disabled" value="enviar"></h:button></td></tr>
-                    <tr class="trGC"><td class="tdGC">0002</td><td class="tdGC">No</td><td class="tdGC">-</td><td class="tdGC"><h:button class="ColorBoton disabled" value="enviar"></h:button></td></tr>
-                    <tr class="trGC2"><td class="tdGC">0003</td><td class="tdGC">Si</td><td class="tdGC">16/02/2014</td><td class="tdGC"><h:button class="ColorBoton" outcome="EnvioIRPF.xhtml" value="enviar"></h:button></td></tr>
-                    <tr class="trGC"><td class="tdGC">0004</td><td class="tdGC">Si</td><td class="tdGC">22/03/2014</td><td class="tdGC"><h:button class="ColorBoton" outcome="EnvioIRPF.xhtml" value="enviar"></h:button></td></tr>
+                    <tr class="trGC"><td class="tdGC">0000</td><td class="tdGC">Si</td><td class="tdGC">19/02/2014</td><td class="tdGC"><h:commandButton class="ColorBoton" action="#{controlCuota.btnEnviarIRPF()}" value="enviar"></h:commandButton></td></tr>
+                    <tr class="trGC2"><td class="tdGC">0001</td><td class="tdGC">No</td><td class="tdGC" >-</td><td class="tdGC"><h:commandButton class="ColorBoton disabled" value="enviar"></h:commandButton></td></tr>
+                    <tr class="trGC"><td class="tdGC">0002</td><td class="tdGC">No</td><td class="tdGC">-</td><td class="tdGC"><h:commandButton class="ColorBoton disabled" value="enviar"></h:commandButton></td></tr>
+                    <tr class="trGC2"><td class="tdGC">0003</td><td class="tdGC">Si</td><td class="tdGC">16/02/2014</td><td class="tdGC"><h:commandButton class="ColorBoton" action="#{controlCuota.btnEnviarIRPF()}" value="enviar"></h:commandButton></td></tr>
+                    <tr class="trGC"><td class="tdGC">0004</td><td class="tdGC">Si</td><td class="tdGC">22/03/2014</td><td class="tdGC"><h:commandButton class="ColorBoton" action="#{controlCuota.btnEnviarIRPF()}" value="enviar"></h:commandButton></td></tr>
                 </body>
             </table>
             <br/><br/><br/>
+          </h:form>
         </ui:define>
     </ui:composition>
 </html>
