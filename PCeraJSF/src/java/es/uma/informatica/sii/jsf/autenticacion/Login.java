@@ -35,8 +35,9 @@ public class Login {
      */
     public Login() {
         usuarios = new ArrayList<Usuario>();
-        usuarios.add(new Usuario(1,"pepe", "asdf"));
-        usuarios.add(new Usuario(2,"manolo", "qwer"));
+        usuarios.add(new Usuario(1,"pepe", "asdf",0));
+        usuarios.add(new Usuario(2,"manolo", "qwer",1));
+        usuarios.add(new Usuario(3,"jose","jose",2));
     }
 
     public String getUsuario() {
