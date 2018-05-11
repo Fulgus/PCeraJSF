@@ -52,7 +52,7 @@ public class ControlInicio implements Serializable {
             case 0:
                 return "perfil-administrador.xhtml";
             case 1:
-                return "perfil-coordinador.xhtml";
+                return "perfil-administrador.xhtml";
             default:
                 return "perfil-educando.xhtml";
         }

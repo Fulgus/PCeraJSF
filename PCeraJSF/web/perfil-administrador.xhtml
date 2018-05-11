@@ -14,12 +14,20 @@ and open the template in the editor.
         <ui:define name="title">Perfil Administrador</ui:define>
         <ui:define name="contenido">
              <h1>Perfil</h1>
-             Eres administrador 
+             <c:if test ="#{controlInicio.getUsuario().getTipoUsuario() == 0}">
+                 Eres administrador
+             </c:if>
+             
+             <c:if test ="#{controlInicio.getUsuario().getTipoUsuario() == 1}">
+                 Eres coordinador
+             </c:if>
             <div id="div-perfil"> 
              <table cellspan="5">
                 <tr>
                   <td rowspan="2"><img src="img-profile.png" id="fotoperfil"/></td>
-                  <td>-<h:link value="Asignación de privilegios" outcome="privilegios.xhtml"/></td>
+                  <c:if test ="#{controlInicio.getUsuario().getTipoUsuario() == 0}">
+                    <td>-<h:link value="Asignación de privilegios" outcome="privilegios.xhtml"/></td>
+                  </c:if>
                 </tr>
                 <tr>
                   <td>-<h:link value="Gestión de usuarios" outcome="gest-usuarios.xhtml"/></td>
