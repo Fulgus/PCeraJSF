@@ -10,33 +10,23 @@
         <ui:define name="title">Perfil Administrador</ui:define>
         <ui:define name="contenido">
             <h:form>
-                <h:dataTable class="tableGestCuo" value="#{controlPerfilAdministrador.getListaEducandos()}" var="u">
+                <h:dataTable class="tableGestCuo" value="#{controlPerfilAdministrador.getListaDocumentosDeUsuario()}" var="d">
                     <h:column>
                         <f:facet name="header">ID</f:facet>
-                        <h:outputText value="#{u.idUsuario}"/>
+                        <h:outputText value="#{d.idDocumento}"/>
                     </h:column>
 
                     <h:column>
-                        <f:facet name="header">Usuario</f:facet>
-                        <h:outputText value="#{u.usuario}"/>
+                        <f:facet name="header">Fecha</f:facet>
+                        <h:outputText value="#{d.fechaSubida}"/>
                     </h:column>
 
                     <h:column>
                         <f:facet name="header">Nombre</f:facet>
-                        <h:outputText value="#{u.nombre}"/>
+                        <h:outputText value="#{d.nombre}"/>
                     </h:column>
-
-                    <h:column>
-                        <f:facet name="header">Grupo</f:facet>
-                        <h:outputText value="#{u.seccion}"/>
-                    </h:column>
-
-                    <h:column>
-                        <f:facet name="header">Documentos</f:facet>
-                        <h:commandButton value="ver" action="#{controlPerfilAdministrador.clickVerDocumentacion(u.idUsuario)}"/>
-                    </h:column>
-
                 </h:dataTable>
+                <h:commandButton value="Descargar Listado" action="#{controlPerfilAdministrador.clickBotonDescargarListado()}"/>
             </h:form>
         </ui:define>
     </ui:composition>
