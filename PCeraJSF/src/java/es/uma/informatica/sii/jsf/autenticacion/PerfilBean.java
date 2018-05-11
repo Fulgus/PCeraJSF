@@ -8,6 +8,7 @@ package es.uma.informatica.sii.jsf.autenticacion;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -35,7 +36,18 @@ public class PerfilBean {
      */
     public PerfilBean() {
         //TODO: creamos datos ficticios
-        //TODO: cambiar navegacion en el perfil
+        this.usuario="scouter96";
+        this.nombre="Pedro";
+        this.apellidos="Rajoy Iglesias";
+        this.localidad="Murcia";
+        this.sexo="Varón";
+        this.direccion="C/pppppp, 123";
+        this.grupo="Lobatos";
+        this.email="asdf@1234.com";
+        this.telefono="634872123";
+        this.fecha_nacimiento =  new Date("5/12/1999");
+        this.fecha_jura_bandera = new Date("2/15/2015");
+        this.fecha_alta = new Date("10/30/2014");
     }
 
     public String getUsuario() {
@@ -134,6 +146,23 @@ public class PerfilBean {
         this.fecha_alta = fecha_alta;
     }
     
+        public String mostrarFecha_juraBand(){
+        SimpleDateFormat df = new SimpleDateFormat ("dd/MM/yyyy");
+        String fecha = df.format(fecha_jura_bandera);
+        return fecha;
+    }
+    
+    public String mostrarFecha_nacimiento(){
+        SimpleDateFormat df = new SimpleDateFormat ("dd/MM/yyyy");
+        String fecha = df.format(fecha_nacimiento);
+        return fecha;
+    }
+    
+        public String mostrarFecha_alta(){
+        SimpleDateFormat df = new SimpleDateFormat ("dd/MM/yyyy");
+        String fecha = df.format(fecha_alta);
+        return fecha;
+    }
     
     
     public String clickLinkModificar() {
@@ -141,7 +170,7 @@ public class PerfilBean {
     }
     
     public String clickLinkCambiarContrasenia() {
-        return "cambiarContrasenia.xhtml";
+        return "modificarContrasenia.xhtml";
     }
     
     public String clickLinkPagarCuota() {
