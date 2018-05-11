@@ -21,6 +21,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
@@ -33,6 +34,15 @@ import javax.xml.bind.annotation.XmlTransient;
             + "join (select )")//Esta query es para la gestion de la cocumentacion, es una locura en jpql lo dejo para la siguiente entrega
 })
 public class Usuario implements Serializable {
+    
+    @Transient
+    public final int PERF_ADMINISTRADOR = 0;
+    @Transient
+    public final int PERF_COORDINADOR = 1;
+    @Transient
+    public final int PERF_SCOUTER = 2;
+    @Transient
+    public final int PERF_EDUCANDO = 3;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -79,7 +89,6 @@ public class Usuario implements Serializable {
         this.idUsuario = idUsuario;
     }
 
-    
     public String getNombre() {
         return nombre;
     }
@@ -112,10 +121,10 @@ public class Usuario implements Serializable {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-       // Tipo de usuario
-       // 0: Admin
-       // 1: Scouter
-       // 2: Educando
+    // Tipo de usuario
+    // 0: Admin
+    // 1: Scouter
+    // 2: Educando
     public Integer getTipoUsuario() {
         return tipoUsuario;
     }
