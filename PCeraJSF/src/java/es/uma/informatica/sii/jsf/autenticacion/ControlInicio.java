@@ -28,6 +28,7 @@ public class ControlInicio implements Serializable {
         return usuario;
     }
 
+    //Control de los diferentes botones de la plantilla
     public String clickLinkInformacion() {
         return "informacion.xhtml";
     }
@@ -37,12 +38,6 @@ public class ControlInicio implements Serializable {
     }
 
     public String clickLinkInicio() {
-        // Implementar el método
-        // Devuelve la página Home dependiendo del rol del usuario
-        // Si no hay usuario debe devolver la página de login
-        // Si el usuario es el administrador debe devolver la página admin.xhtml
-        // Si el usuario es un usuario normal debe devolver la página normal.xhtml
-
         return "index.xhtml";
     }
 
@@ -50,13 +45,14 @@ public class ControlInicio implements Serializable {
         return "inicioSesion.xhtml";
     }
 
+    //Al pulsar el botón perfil (hay que estar logeado para que aparezca) elige a que tipo de perfil entra en funcion del usuario logeado
     public String clickLinkPerfil() {
 
         switch (usuario.getTipoUsuario()) {
             case 0:
                 return "perfil-administrador.xhtml";
             case 1:
-                return "perfil-coordinador.xhtml";
+                return "perfil-administrador.xhtml";
             default:
                 return "perfil-educando.xhtml";
         }
@@ -66,18 +62,16 @@ public class ControlInicio implements Serializable {
     public String clickLinkCuota() {
         return "GestionarCuota.xhtml";
     }
+    // Destruye la sesión (y con ello, el ámbito de este bean)
 
     public String logout() {
-        // Destruye la sesión (y con ello, el ámbito de este bean)
         FacesContext ctx = FacesContext.getCurrentInstance();
         ctx.getExternalContext().invalidateSession();
         usuario = null;
         return "inicio.xhtml";
     }
 
-    /**
-     * Creates a new instance of ControlAutorizacion
-     */
+    //Crea una nueva instancia de ControlInicio
     public ControlInicio() {
     }
 }
