@@ -1,0 +1,59 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package es.uma.informatica.sii.jsf.autenticacion;
+
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+import java.util.Date;
+
+/**
+ *
+ * @author Marcos
+ */
+
+@Named(value = "controlCuota")
+@RequestScoped
+public class ControlCuota {
+    private double importe;
+    private Integer Anio;
+
+    public ControlCuota(){
+    
+    }
+        
+    public double getImporte() {
+        return importe;
+    }
+
+    public void setImporte(double importe) {
+        this.importe = importe;
+    }
+
+    public Integer getAnio() {
+        return Anio;
+    }
+
+    public void setFecha(Integer Anio) {
+        this.Anio = Anio;
+    }
+    
+    //Este metodo controla que cancelas la creación de cuota
+    public String btnCancelarCrCuota(){
+        return "GestionarCuota.xhtml";
+    }
+    
+    //Este metodo controla que crea la cuota
+    public String btnCrearCrCuota(){
+        return "GestionarCuota.xhtml";
+    }
+    //Este boton cierra el popup deIRPF
+    public String btnCerrarIRPF(){
+        return "VerCuota.xhtml";
+    }
+    
+}
+    
+

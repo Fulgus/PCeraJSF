@@ -9,15 +9,17 @@
     <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
         <ui:define name="title">Crear Cuota</ui:define>
         <ui:define name="contenido">
-            <h1 style="padding-left: 40%">Año</h1>
-            <h2 style="padding-left: 40%"><input style="border: solid" type="text" maxlength="20" size="20" name="lenguaje"></input></h2>
-            <h1 style="padding-left: 40%">Importe</h1>
-            <h2 style="padding-left: 40%"><input style="border: solid" type="text" maxlength="20" size="20" name="lenguaje"></input></h2>
-            <table style="margin-left:  35%">
-                <tr><td><h:button class="ColorBoton" outcome="GestionarCuota.xhtml" value="Aceptar"></h:button></td>
-                    <td><h:button style="margin-left:100%" class="ColorBoton" outcome="GestionarCuota.xhtml" value="Cancelar"></h:button></td></tr>
-            </table>
-            <br /><br /><br />
+            <h:form>
+                <h1 style="padding-left: 40%">Año</h1>
+                <h2 style="padding-left: 40%"><h:inputText style="border: solid" required="true" onkeypress="if (event.which &lt; 48 || event.which &gt; 57) return false;"/></h2>
+                <h1 style="padding-left: 40%">Importe</h1>
+                <h2 style="padding-left: 40%"><h:inputText style="border: solid" required="true" onkeypress="if (event.which &lt; 46 || event.which &gt; 57) return false;"/></h2>
+                    <h:commandButton style="margin-left:  35%" class="ColorBoton" action="#{controlCuota.btnCrearCrCuota()}" value="Aceptar"></h:commandButton>
+            </h:form>
+            <h:form>
+                    <h:commandButton style="margin-left:50%; position: absolute; bottom: 8.5% " class="ColorBoton" action="#{controlCuota.btnCancelarCrCuota()}" value="Cancelar"></h:commandButton>
+                <br /><br /><br />
+            </h:form>
         </ui:define>
     </ui:composition>
 </html>
