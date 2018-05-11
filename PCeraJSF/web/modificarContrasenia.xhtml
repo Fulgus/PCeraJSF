@@ -9,9 +9,17 @@
     <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
         <ui:define name="title">Inicio</ui:define>
         <ui:define name="contenido">
-            <h1>Documento subido</h1>
-            <p>Documento subido satisfactoriamente</p>
-            <h:button class="ColorBoton" outcome="documentosPrincipal" value="Continuar"></h:button>
+            <h1>Cambiar contraseña</h1>
+            <p>
+                <table border="0">
+                    <tr>
+                        <td>Introducir nueva contraseña</td> <td><h:inputSecret ></h:inputSecret></td>
+                    </tr>
+                </table>
+            </p>
+            <p>
+                <h:button class="ColorBoton" outcome="cambiarContrasenia.xhtml" value="Continuar"></h:button>
+            </p>
         </ui:define>
     </ui:composition>
 </html>
