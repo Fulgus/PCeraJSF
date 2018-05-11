@@ -58,7 +58,11 @@ public class controlPerfilAdministrador implements Serializable {
     }
     
     public void clickBotonDescargarListado() {
-        
+        //Rellenar
+    }
+    
+    public void clickBotonBorrarDocumento(){
+        //Rellenar
     }
     
     public List<Usuario> getL() {
