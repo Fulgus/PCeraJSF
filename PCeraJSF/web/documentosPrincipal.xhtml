@@ -19,16 +19,16 @@
                                 <th>Documentos </th>  <th>Fecha </th>  <th>Ver </th>  <th>Modificar</th>
                             </tr>
                             <tr>
-                                <td>Documento1 </td> <td> 1/01/1999</td> <td><h:link outcome="descargarDocumento.xhtml" value="Descargar"></h:link></td> <td><h:link outcome="modificarDocumento.xhtml" value="Modificar"></h:link></td>                                             
+                                <td>Documento1 </td> <td> 1/01/1999</td> <td><h:commandLink action="#{controlDocumentos.descargarDoc()}" value="Descargar"></h:commandLink></td> <td><h:commandLink action="#{controlDocumentos.modificarDoc()}" value="Modificar"></h:commandLink></td>                                             
                             </tr>
                             <tr>
-                                <td>Documento2</td> <td>1/54/7854</td> <td><h:link outcome="descargarDocumento.xhtml" value="Descargar"></h:link></td> <td><h:link outcome="modificarDocumento.xhtml" value="Modificar"></h:link></td>
+                                <td>Documento2</td> <td>1/54/7854</td> <td><h:commandLink action="#{controlDocumentos.descargarDoc()}" value="Descargar"></h:commandLink></td> <td><h:commandLink action="#{controlDocumentos.modificarDoc()}" value="Modificar"></h:commandLink></td>
                             </tr>
                         </thead>
                     </table>
                     <table align="center" border="0">
                         <tr>
-                            <td><h:button class="ColorBoton" outcome="perfil-educando.xhtml" value="Atras"></h:button></td> <td><h:button class="ColorBoton" outcome="subirDocumento.xhtml" value="Subir Documento"></h:button></td>
+                            <td><h:commandButton class="ColorBoton" action="#{controlDocumentos.volverPerfil()}" value="Atras"></h:commandButton></td> <td><h:commandButton class="ColorBoton" action="#{controlDocumentos.subirDoc()}"  value="Subir Documento"></h:commandButton></td>
                         </tr>
                     </table>
                 </h:form>
