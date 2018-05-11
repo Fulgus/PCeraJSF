@@ -6,9 +6,11 @@
 package es.uma.informatica.sii.jsf.autenticacion.modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import javax.management.Query;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,11 +32,9 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @NamedQueries({
-    @NamedQuery(name = "allEducandosConDocumentos", query = "select e.usuario,e.nombre, from Usuario e "
-            + "join (select )")//Esta query es para la gestion de la cocumentacion, es una locura en jpql lo dejo para la siguiente entrega
-})
+    @NamedQuery(name = "getDocumentos", query = "select d from Documento d where d.usuarioIdUsuario=:idUsuario")})
 public class Usuario implements Serializable {
-    
+
     @Transient
     public static final int PERF_ADMINISTRADOR = 0;
     @Transient
@@ -88,13 +88,20 @@ public class Usuario implements Serializable {
         this.sexo = sexo;
     }
 
-    
-    
     public Usuario(Integer idUsuario, String usuario, String contrasenia, Integer rol) {
         this.idUsuario = idUsuario;
         this.usuario = usuario;
         this.contraseña = contrasenia;
         this.tipoUsuario = rol;
+    }
+    
+    public List<Documento> getDocumentos(){
+        /*hay que llamar al entityManager para crear la query*/
+        List<Documento> l= new ArrayList<>();
+        l.add(new Documento(1, "DNI", new Date(1902, 2, 2), this.idUsuario));
+        l.add(new Documento(2, "Recibo Banco", new Date(1902, 2, 2), this.idUsuario));
+        l.add(new Documento(3, "Fotocopia", new Date(1902, 2, 2), this.idUsuario));
+        return l;
     }
 
     public Integer getIdUsuario() {
