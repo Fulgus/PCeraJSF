@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
+        <ui:define name="title">Modificar Perfil</ui:define>
+        <ui:define name="contenido">
+            <h1>Perfil</h1>
+            <div id="div-modificar-perfil"> 
+                <table cellspan="5" id="tablaperfil">
+                    <tr>
+                        <td>Usuario:</td>
+                        <td>Nombre:</td>
+                        <td>Apellidos:</td>
+                    </tr>
+                    <tr>
+                        <td><h:inputText></h:inputText></td>
+                        <td><h:inputText></h:inputText></td>
+                        <td><h:inputText></h:inputText></td>
+                    </tr>
+                    <tr>
+                        <td>Localidad:</td>
+                        <td> <p:outputLabel for="buttonBandera" value="Fecha de juramento de bandera:" /></td>
+                        <td>Sexo:</td>
+                    </tr>
+                    <tr>
+                        <td><h:inputText></h:inputText></td>
+                        <td><p:calendar id="buttonBandera" showOn="button" /></td>
+                        <td><h:inputText></h:inputText></td>
+                    </tr>
+                    <tr>
+                        <td>Dirección:</td>
+                        <td><p:outputLabel for="buttonNacimiento" value="Fecha de nacimiento:" /></td>
+                        <td>Grupo:</td>
+                    </tr>
+                    <tr>
+                        <td><h:inputText></h:inputText></td>
+                        <td><p:calendar id="buttonNacimiento" showOn="button" /></td>
+                        <td><h:inputText></h:inputText></td>
+                    </tr>
+                    <tr>
+                        <td><p:outputLabel for="buttonAlta" value="Fecha de alta:" /></td>
+                        <td>E-mail:</td>
+                        <td>Teléfono:</td>
+                    </tr>
+                    <tr>
+                        <td><p:calendar id="buttonAlta" showOn="button" /></td>
+                        <td><h:inputText></h:inputText></td>
+                        <td><h:inputText></h:inputText></td>
+                    </tr>    
+                </table> 
+                <p id="boton-submit-perfil">
+                    <h:button class="ColorBoton" value="Aplicar cambios" outcome="perfil-educando.xhtml"/>
+                </p>
+                <br/><br/><br/><br/><br/>
+            </div>
+        </ui:define>
+
+    </ui:composition>
+</html>
