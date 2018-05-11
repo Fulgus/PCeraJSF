@@ -6,9 +6,11 @@
 package es.uma.informatica.sii.jsf.autenticacion.modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import javax.management.Query;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,6 +18,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,16 +31,18 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Boti
  */
 @Entity
+@NamedQueries({
+    @NamedQuery(name = "getDocumentos", query = "select d from Documento d where d.usuarioIdUsuario=:idUsuario")})
 public class Usuario implements Serializable {
-    
-    @Transient 
-    public static final Integer PERF_ADMIN = 0;
+
     @Transient
-    public static final Integer PERF_COORD = 1;
+    public static final int PERF_ADMINISTRADOR = 0;
     @Transient
-    public static final Integer PERF_SCOUTER = 2;
+    public static final int PERF_COORDINADOR = 1;
     @Transient
-    public static final Integer PERF_EDUCANDO = 3;
+    public static final int PERF_SCOUTER = 2;
+    @Transient
+    public static final int PERF_EDUCANDO = 3;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -68,11 +74,39 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
+    public Usuario(Integer idUsuario, String usuario, String contraseña, String nombre, String apellidos, String dni, Date fechaNacimiento, Integer tipoUsuario, String email, String direccion, String sexo) {
+        this.idUsuario = idUsuario;
+        this.usuario = usuario;
+        this.contraseña = contraseña;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.dni = dni;
+        this.fechaNacimiento = fechaNacimiento;
+        this.tipoUsuario = tipoUsuario;
+        this.email = email;
+        this.direccion = direccion;
+        this.sexo = sexo;
+    }
+
     public Usuario(Integer idUsuario, String usuario, String contrasenia, Integer rol) {
         this.idUsuario = idUsuario;
         this.usuario = usuario;
         this.contraseña = contrasenia;
         this.tipoUsuario = rol;
+    }
+
+    public List<Documento> getDocumentos() {
+        //hay que llamar al entityManager para crear la query
+        List<Documento> l = new ArrayList<>();
+        l.add(new Documento(1, "DNI", new Date(1902, 2, 2), this.idUsuario));
+        l.add(new Documento(2, "Recibo Banco", new Date(1902, 2, 2), this.idUsuario));
+        l.add(new Documento(3, "Fotocopia", new Date(1902, 2, 2), this.idUsuario));
+        return l;
+    }
+
+    public String getSeccion() {
+        ////hay que llamar al entityManager para crear la query
+        return "Lobatos";
     }
 
     public Integer getIdUsuario() {
@@ -83,7 +117,6 @@ public class Usuario implements Serializable {
         this.idUsuario = idUsuario;
     }
 
-    
     public String getNombre() {
         return nombre;
     }
@@ -116,11 +149,11 @@ public class Usuario implements Serializable {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-       // Tipo de usuario
-       // 0: Admin
-       // 1: Coordinador
-       // 2: Scouter
-       // 3: Educando
+    // Tipo de usuario
+    // 0: Admin
+    // 1: Coordinador
+    // 2: Scouter
+    // 3: Educando
     public Integer getTipoUsuario() {
         return tipoUsuario;
     }
