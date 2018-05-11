@@ -187,3 +187,19 @@ ul.menulist li {
 #div-modificar-perfil{
     font-size: 13px;
 }
+
+#popup
+   {
+      position: absolute;
+      border: 1px solid #666666;
+      background-color:#F7F7F7;
+      width: 200px;
+      height: 100px;
+      margin-top: 50px;
+     margin-left: 40%;
+   }
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
