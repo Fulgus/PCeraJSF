@@ -36,13 +36,13 @@ import javax.xml.bind.annotation.XmlTransient;
 public class Usuario implements Serializable {
     
     @Transient
-    public final int PERF_ADMINISTRADOR = 0;
+    public static final int PERF_ADMINISTRADOR = 0;
     @Transient
-    public final int PERF_COORDINADOR = 1;
+    public static final int PERF_COORDINADOR = 1;
     @Transient
-    public final int PERF_SCOUTER = 2;
+    public static final int PERF_SCOUTER = 2;
     @Transient
-    public final int PERF_EDUCANDO = 3;
+    public static final int PERF_EDUCANDO = 3;
 
     private static final long serialVersionUID = 1L;
     @Id
