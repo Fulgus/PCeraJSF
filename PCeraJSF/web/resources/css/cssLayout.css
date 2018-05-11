@@ -98,26 +98,26 @@ ul.menulist li {
 }
 
 .ColorBoton{
-  display: inline-block;
-  padding: 10px 17px;
-  font-size: 15px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #8702B9;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 3px #999;
+    display: inline-block;
+    padding: 10px 17px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #8702B9;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
 }
 
 .ColorBoton:hover {background-color: #3e8e41}
 
 .ColorBoton:active {
-  background-color: #3e8e41;
-  box-shadow: 0 6px #666;
-  transform: translateY(4px);
+    background-color: #3e8e41;
+    box-shadow: 0 6px #666;
+    transform: translateY(4px);
 }
 
 #fotoperfil{
@@ -126,7 +126,7 @@ ul.menulist li {
 }
 
 #boton-aniadir-user{
-   text-align: center;
+    text-align: center;
 }
 
 .tabla-gest-user th, .tabla-gest-user td{
@@ -144,34 +144,34 @@ ul.menulist li {
 
 /*GC = Gestionar Cuota*/
 .thGC{
-  background-color: green;
-  color: white;
-  font-weight: normal;
+    background-color: green;
+    color: white;
+    font-weight: normal;
 
 }
 
 .tableGestCuo {
-  border-collapse: collapse;
-  width: 70%;
+    border-collapse: collapse;
+    width: 70%;
 }
 
 .tableGestCuo, .thGC, .tdGC {
-  border: 1px solid green;
+    border: 1px solid green;
 }
 
 .tdGC, .thGC {
-  padding: 0.3em;
-  height:30px;
-  
-  text-align: center;
+    padding: 0.3em;
+    height:30px;
+
+    text-align: center;
 }
 
 .trGC2 {
-  background-color: #ddffdd;
+    background-color: #ddffdd;
 }
 
 .trGC {
-  background-color: white;
+    background-color: white;
 }
 
 #foto_cerrar_pest{
