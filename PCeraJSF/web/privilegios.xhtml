@@ -26,7 +26,7 @@ and open the template in the editor.
                         <td>User 1</td>
                         <td>
                         <div class="radio-privilegios">
-                            <input type="radio" id='educando' name="optradio" checked/>
+                            <input type="radio" id='educando' name="optradio" checked="checked"/>
                         </div>
                         </td>
                         <td>
@@ -54,7 +54,7 @@ and open the template in the editor.
                         </td>
                         <td>
                         <div class="radio-privilegios">
-                            <input type="radio" id='scouter' name="optradio2" checked/>
+                            <input type="radio" id='scouter' name="optradio2" checked="checked"/>
                         </div>
                         </td>
                         <td>
@@ -69,10 +69,10 @@ and open the template in the editor.
                         </td>
                     </tr>
                 </table>
-            </h:form>
-            <p id="boton-aniadir-user">
-            <h:commandButton class="ColorBoton" action="#{controlInicio.clickLinkPerfil()}" value="Añadir"/>
-            </p>
+                <p id="boton-aniadir-user">
+                    <h:commandButton class="ColorBoton" action="#{controlInicio.clickLinkPerfil()}" value="Añadir"/>
+                </p>
+            </h:form>    
         </ui:define>
 
     </ui:composition>
