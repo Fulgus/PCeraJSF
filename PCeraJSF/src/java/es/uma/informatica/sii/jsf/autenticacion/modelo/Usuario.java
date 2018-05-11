@@ -96,12 +96,17 @@ public class Usuario implements Serializable {
     }
     
     public List<Documento> getDocumentos(){
-        /*hay que llamar al entityManager para crear la query*/
+        //hay que llamar al entityManager para crear la query
         List<Documento> l= new ArrayList<>();
         l.add(new Documento(1, "DNI", new Date(1902, 2, 2), this.idUsuario));
         l.add(new Documento(2, "Recibo Banco", new Date(1902, 2, 2), this.idUsuario));
         l.add(new Documento(3, "Fotocopia", new Date(1902, 2, 2), this.idUsuario));
         return l;
+    }
+    
+    public String getSeccion(){
+        ////hay que llamar al entityManager para crear la query
+        return "Lobatos";
     }
 
     public Integer getIdUsuario() {
