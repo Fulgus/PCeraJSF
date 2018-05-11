@@ -28,38 +28,48 @@ public class ControlInicio implements Serializable {
         return usuario;
     }
 
-    public String clickLinkInformacion(){
+    public String clickLinkInformacion() {
         return "informacion.xhtml";
     }
-    
-    public String clickLinkApuntate(){
+
+    public String clickLinkApuntate() {
         return "apuntate.xhtml";
     }
-    
+
     public String clickLinkInicio() {
         // Implementar el método
         // Devuelve la página Home dependiendo del rol del usuario
         // Si no hay usuario debe devolver la página de login
         // Si el usuario es el administrador debe devolver la página admin.xhtml
         // Si el usuario es un usuario normal debe devolver la página normal.xhtml
-        
+
         return "index.xhtml";
     }
-    
-    public String clickLinkLogin(){
+
+    public String clickLinkLogin() {
         return "inicioSesion.xhtml";
     }
-    
-    public String clickLinkPerfil(){
-        return "perfil-coordinador.xhtml"; //Falta controlar el tipo de perfil
+
+    public String clickLinkPerfil() {
+        if (null == usuario.getTipoUsuario()) {
+            return "inicio.xhtml";
+        } else {
+            switch (usuario.getTipoUsuario()) {
+                case 0:
+                    return "perfil-administrador.xhtml";
+                case 1:
+                    return "perfil-coordinador.xhtml";
+                default:
+                    return "perfil-educando.xhtml";
+            }
+        }
     }
-    
-    public String clickLinkCuota(){
+
+    public String clickLinkCuota() {
         return "GestionarCuota.xhtml";
     }
-    
-    public String logout()
-    {
+
+    public String logout() {
         // Destruye la sesión (y con ello, el ámbito de este bean)
         FacesContext ctx = FacesContext.getCurrentInstance();
         ctx.getExternalContext().invalidateSession();
