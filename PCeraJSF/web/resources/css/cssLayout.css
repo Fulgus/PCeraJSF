@@ -187,3 +187,11 @@ ul.menulist li {
 #div-modificar-perfil{
     font-size: 13px;
 }
+
+#input:invalid {
+  border: 1px solid red;
+}
+
+#input:valid {
+  border: 1px solid green;
+}

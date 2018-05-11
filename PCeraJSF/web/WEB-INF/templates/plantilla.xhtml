@@ -29,9 +29,10 @@
                                         <li class="sesion"><h:commandLink action="#{controlInicio.clickLinkLogin()}" value="Inicio de Sesión"/></li>
                                     </c:if>
                                     <c:if test="#{!empty controlInicio.usuario}">
-                                        <li class="sesion"><h:commandLink action="#{controlInicio.clickLinkPerfil()}" value="Perfil"/></li>
+                                        <li class="sesion"><h:commandLink action="#{controlInicio.logout()}" value="Cerrar sesión"/></li>
+                                        <li class="sesion"><h:commandLink action="#{controlInicio.clickLinkPerfil()}" value="Perfil"/></li>                                        
                                     </c:if>
-                                    <li><h:commandLink action="#{controlInicio.clickLinkCuota()}" value="Cuota"/></li>
+                                    
                                 </ul>
                             </h:form>
                         </div>

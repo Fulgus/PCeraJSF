@@ -12,7 +12,7 @@ import javax.faces.context.FacesContext;
 
 /**
  *
- * @author francis
+ * @author Santiago
  */
 @Named(value = "controlInicio")
 @SessionScoped
