@@ -15,6 +15,7 @@ and open the template in the editor.
         <ui:define name="contenido">
             <h1>Perfil</h1>
             <div id="div-modificar-perfil"> 
+                <h:form>
                 <table cellspan="5" id="tablaperfil">
                     <tr>
                         <td>Usuario:</td>
@@ -22,9 +23,9 @@ and open the template in the editor.
                         <td>Apellidos:</td>
                     </tr>
                     <tr>
-                        <td><h:inputText></h:inputText></td>
-                        <td><h:inputText></h:inputText></td>
-                        <td><h:inputText></h:inputText></td>
+                        <td><h:inputText value="#{perfil.usuario}"></h:inputText></td>
+                        <td><h:inputText value="#{perfil.nombre}"></h:inputText></td>
+                        <td><h:inputText value="#{perfil.apellidos}"></h:inputText></td>
                     </tr>
                     <tr>
                         <td>Localidad:</td>
@@ -32,9 +33,9 @@ and open the template in the editor.
                         <td>Sexo:</td>
                     </tr>
                     <tr>
-                        <td><h:inputText></h:inputText></td>
+                        <td><h:inputText value="#{perfil.localidad}"></h:inputText></td>
                         <td><p:calendar id="buttonBandera" showOn="button" /></td>
-                        <td><h:inputText></h:inputText></td>
+                        <td><h:inputText value="#{perfil.sexo}"></h:inputText></td>
                     </tr>
                     <tr>
                         <td>Dirección:</td>
@@ -42,9 +43,9 @@ and open the template in the editor.
                         <td>Grupo:</td>
                     </tr>
                     <tr>
-                        <td><h:inputText></h:inputText></td>
+                        <td><h:inputText value="#{perfil.direccion}"></h:inputText></td>
                         <td><p:calendar id="buttonNacimiento" showOn="button" /></td>
-                        <td><h:inputText></h:inputText></td>
+                        <td><h:inputText value="#{perfil.grupo}"></h:inputText></td>
                     </tr>
                     <tr>
                         <td><p:outputLabel for="buttonAlta" value="Fecha de alta:" /></td>
@@ -60,6 +61,7 @@ and open the template in the editor.
                 <p id="boton-submit-perfil">
                     <h:button class="ColorBoton" value="Aplicar cambios" outcome="perfil-educando.xhtml"/>
                 </p>
+                </h:form>
                 <br/><br/><br/><br/><br/>
             </div>
         </ui:define>

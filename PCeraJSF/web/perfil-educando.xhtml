@@ -10,48 +10,73 @@ and open the template in the editor.
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
-   <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
+    <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
         <ui:define name="title">Perfil Educando</ui:define>
         <ui:define name="contenido">
-             <h1>Perfil</h1>
-             Eres educando 
-            <div id="div-perfil"> 
-             <table cellspan="5" id="tablaperfil">
-                <tr>
-                  <td rowspan="2"><img src="img-profile.png" id="fotoperfil"/></td>
-                  <td>Usuario:</td>
-                  <td>Nombre:</td>
-                  <td>Apellidos:</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Localidad:</td>
-                  <td>Fecha de juramento de bandera:</td>
-                  <td>Sexo:</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                 <td><h:button class="ColorBoton" value="Modificar Perfil" outcome="modificar-perfil.xhtml"/></td>
-                 <td>Dirección:</td>
-                 <td>Fecha de nacimiento:</td>
-                 <td>Grupo:</td>
-                 <td></td>
-                 <td><h:button class="ColorBoton" value="Pagar cuota" outcome="PagarCuota.xhtml"/></td>
-                </tr>
-                <tr>
-                 <td><h:button class="ColorBoton" value="Cambiar contraseña" outcome="modificarContrasenia.xhtml"/></td>
-                 <td>Fecha de alta:</td>
-                 <td>E-mail:</td>
-                 <td>Teléfono:</td>
-                 <td></td>
-                 <td><h:button class="ColorBoton" value="Ver mi documentación" outcome="documentosPrincipal.xhtml"/></td>
-                </tr>
-            </table> 
+            <h1>Perfil</h1>
+            Eres educando 
+            <div id="div-perfil-educando">
+                <h:form>
+                    <table id="tablaperfil">
+                        <tr>
+                            <td rowspan="3"><img src="img-profile.png" id="fotoperfil"/></td>
+                            <th>Usuario:</th>
+                            <th>Nombre:</th>
+                            <th>Apellidos:</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><h:outputText value="#{perfil.usuario}"/></td>
+                            <td><h:outputText value="#{perfil.nombre}"/></td>
+                            <td><h:outputText value="#{perfil.apellidos}"/></td>
+                        </tr>
+                        <tr>
+                            <th>Localidad:</th>
+                            <th>Fecha de juramento de bandera:</th>
+                            <th>Sexo:</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><h:outputText value="#{perfil.localidad}"/></td>
+                            <td><h:outputText value="#{perfil.mostrarFecha_juraBand()}"/></td>
+                            <td><h:outputText value="#{perfil.sexo}"/></td>
+                        </tr>
+                        <tr>
+                            <td><h:commandButton class="ColorBoton" value="Modificar Perfil" action="#{perfil.clickLinkModificar()}"></h:commandButton></td>
+                            <th>Dirección:</th>
+                            <th>Fecha de nacimiento:</th>
+                            <th>Grupo:</th>
+                            <td></td>
+                            <td><h:commandButton class="ColorBoton" value="Pagar cuota" action="#{perfil.clickLinkPagarCuota()}"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><h:outputText value="#{perfil.direccion}"/></td>
+                            <td><h:outputText value="#{perfil.mostrarFecha_nacimiento()}"/></td>
+                            <td><h:outputText value="#{perfil.grupo}"/></td>
+                        </tr>
+                        <tr>
+                            <td><h:commandButton class="ColorBoton" value="Cambiar contraseña" action="#{perfil.clickLinkCambiarContrasenia()}"></h:commandButton></td>
+                            <th>Fecha de alta:</th>
+                            <th>E-mail:</th>
+                            <th>Teléfono:</th>
+                            <td></td>
+                            <td><h:commandButton class="ColorBoton"  action="#{perfil.clickLinkVerDocumentacion()}" value="Ver mi documentación"></h:commandButton></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><h:outputText value="#{perfil.mostrarFecha_alta()}"/></td>
+                            <td><h:outputText value="#{perfil.email}"/></td>
+                            <td><h:outputText value="#{perfil.telefono}"/></td>
+                        </tr>
+                    </table> 
+                </h:form>
                 <br/><br/><br/><br/><br/>
-        </div>
+            </div>
         </ui:define>
-        
+
     </ui:composition>
 </html>

@@ -11,7 +11,9 @@
         <ui:define name="contenido">
             <h1>Formulario de cambio de contraseña</h1>
             <p>Contraseña cambiada correctamente</p>
-            <h:button class="ColorBoton" outcome="perfil-coordinador.xhtml" value="Volver"/>
+            <h:form>
+                <h:commandButton class="ColorBoton" action="#{controlInicio.clickLinkPerfil()}" value="Volver"/>
+            </h:form>
         </ui:define>
     </ui:composition>
 </html>

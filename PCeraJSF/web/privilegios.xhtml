@@ -26,7 +26,7 @@ and open the template in the editor.
                         <td>User 1</td>
                         <td>
                         <div class="radio-privilegios">
-                            <input type="radio" id='educando' name="optradio"/>
+                            <input type="radio" id='educando' name="optradio" checked/>
                         </div>
                         </td>
                         <td>
@@ -54,7 +54,7 @@ and open the template in the editor.
                         </td>
                         <td>
                         <div class="radio-privilegios">
-                            <input type="radio" id='scouter' name="optradio2"/>
+                            <input type="radio" id='scouter' name="optradio2" checked/>
                         </div>
                         </td>
                         <td>
@@ -71,7 +71,7 @@ and open the template in the editor.
                 </table>
             </h:form>
             <p id="boton-aniadir-user">
-            <h:button class="ColorBoton" value="añadir" outcome="aniadir-usuario.xhtml"/>
+            <h:commandButton class="ColorBoton" action="#{controlInicio.clickLinkPerfil()}" value="Añadir"/>
             </p>
         </ui:define>
 
