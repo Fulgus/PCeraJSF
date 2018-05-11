@@ -108,12 +108,9 @@ public class Usuario implements Serializable {
 
        // Tipo de usuario
        // 0: Admin
-       // 1: Scouter
-       // 2: Educando: Castor
-       // 3: Educando: Manada
-       // 4: Educando: Tropa
-       // 5: Educando: Unidad
-       // 6: Educando: Clan
+       // 1: Coordinador
+       // 2: Scouter
+       // 3: Educando
     public Integer getTipoUsuario() {
         return tipoUsuario;
     }
