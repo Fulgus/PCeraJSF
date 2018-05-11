@@ -72,7 +72,7 @@ public class ControlInicio implements Serializable {
         FacesContext ctx = FacesContext.getCurrentInstance();
         ctx.getExternalContext().invalidateSession();
         usuario = null;
-        return "login.xhtml";
+        return "inicio.xhtml";
     }
 
     /**
