@@ -58,10 +58,11 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Integer idUsuario, String usuario, String contrasenia) {
+    public Usuario(Integer idUsuario, String usuario, String contrasenia, Integer rol) {
         this.idUsuario = idUsuario;
         this.usuario = usuario;
         this.contraseña = contrasenia;
+        this.tipoUsuario = rol;
     }
 
     public Integer getIdUsuario() {
@@ -105,6 +106,10 @@ public class Usuario implements Serializable {
         this.fechaNacimiento = fechaNacimiento;
     }
 
+       // Tipo de usuario
+       // 0: Admin
+       // 1: Scouter
+       // 2: Educando
     public Integer getTipoUsuario() {
         return tipoUsuario;
     }
