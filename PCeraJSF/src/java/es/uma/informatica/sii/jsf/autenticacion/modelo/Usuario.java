@@ -16,6 +16,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -26,6 +28,10 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Boti
  */
 @Entity
+@NamedQueries({
+    @NamedQuery(name = "allEducandosConDocumentos", query = "select e.usuario,e.nombre, from Usuario e "
+            + "join (select )")//Esta query es para la gestion de la cocumentacion, es una locura en jpql lo dejo para la siguiente entrega
+})
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
