@@ -19,83 +19,85 @@ import java.util.Date;
 @RequestScoped
 public class PerfilBean {
     
-    private String usuario;
+    private Usuario miembro;
+    //Campos para usuario ficticio.
+    /*private String usuario;
     private String nombre;
     private String apellidos;
     private String localidad;
     private String sexo;
     private String direccion;
+    private String email;*/
     private String grupo;
-    private String email;
-    private String telefono;
     private Date fecha_nacimiento;
     private Date fecha_jura_bandera;
     private Date fecha_alta;
+    private String telefono;
     /**
      * Creates a new instance of PerfilBean
      */
     public PerfilBean() {
-        //TODO: creamos datos ficticios
-        this.usuario="scouter96";
+        // creamos datos ficticios
+        miembro = new Usuario(1, "pepe", "asdf", "Pepe", "García", "23412332R", new Date(1999, 5, 12), Usuario.PERF_EDUCANDO, "mail@mail.com", "casa, 4", "mucho");
+        
+        //NOTA: datos ficticios para evaluar en un futuro.
+        /*this.usuario="scouter96";
         this.nombre="Pedro";
         this.apellidos="Rajoy Iglesias";
         this.localidad="Murcia";
         this.sexo="Varón";
         this.direccion="C/pppppp, 123";
-        this.grupo="Lobatos";
         this.email="asdf@1234.com";
+        */
         this.telefono="634872123";
+        this.grupo="Lobatos";
         this.fecha_nacimiento =  new Date("5/12/1999");
         this.fecha_jura_bandera = new Date("2/15/2015");
         this.fecha_alta = new Date("10/30/2014");
     }
+    
+    public Usuario getMiembro(){
+        return miembro;
+    }
 
     public String getUsuario() {
-        return usuario;
+        return miembro.getUsuario();
     }
 
     public void setUsuario(String usuario) {
-        this.usuario = usuario;
+        this.miembro.setUsuario(usuario);
     }
 
     public String getNombre() {
-        return nombre;
+        return miembro.getNombre();
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.miembro.setNombre(nombre);
     }
 
     public String getApellidos() {
-        return apellidos;
+        return miembro.getApellidos();
     }
 
     public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-    public String getLocalidad() {
-        return localidad;
-    }
-
-    public void setLocalidad(String localidad) {
-        this.localidad = localidad;
+        this.miembro.setApellidos(apellidos);
     }
 
     public String getSexo() {
-        return sexo;
+        return miembro.getSexo();
     }
 
     public void setSexo(String sexo) {
-        this.sexo = sexo;
+        this.miembro.setSexo(sexo);
     }
 
     public String getDireccion() {
-        return direccion;
+        return miembro.getDireccion();
     }
 
     public void setDireccion(String direccion) {
-        this.direccion = direccion;
+        this.miembro.setDireccion(direccion);
     }
 
     public String getGrupo() {
@@ -107,11 +109,11 @@ public class PerfilBean {
     }
 
     public String getEmail() {
-        return email;
+        return miembro.getEmail();
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.miembro.setEmail(email);
     }
 
     public String getTelefono() {
@@ -123,11 +125,11 @@ public class PerfilBean {
     }
 
     public Date getFecha_nacimiento() {
-        return fecha_nacimiento;
+        return miembro.getFechaNacimiento();
     }
 
     public void setFecha_nacimiento(Date fecha_nacimiento) {
-        this.fecha_nacimiento = fecha_nacimiento;
+        this.miembro.setFechaNacimiento(fecha_nacimiento);
     }
 
     public Date getFecha_jura_bandera() {
@@ -154,7 +156,7 @@ public class PerfilBean {
     
     public String mostrarFecha_nacimiento(){
         SimpleDateFormat df = new SimpleDateFormat ("dd/MM/yyyy");
-        String fecha = df.format(fecha_nacimiento);
+        String fecha = df.format(getFecha_nacimiento());
         return fecha;
     }
     

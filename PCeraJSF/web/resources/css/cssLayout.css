@@ -217,4 +217,13 @@ ul.menulist li {
 
 #div-perfil-educando{
     text-align: center;
+    font-size: 20px;
+}
+
+#div-perfil-educando table{
+    width: 80%;
+}
+
+#perfilheader{
+    margin-left: 7%;
 }

@@ -20,26 +20,20 @@ and open the template in the editor.
                     <table cellspan="5" id="tablaperfil">
                         <tr>
                             <td>Usuario:</td>
-                            <td>Localidad:</td>
+                            <td>E-mail:</td>
                         </tr>
                         <tr>
                             <td><h:inputText value="#{perfil.usuario}"></h:inputText></td>
-                            <td><h:inputText value="#{perfil.localidad}"></h:inputText></td>
-                        </tr>
-                        <tr>
-                            <td>E-mail:</td>
-                            <td>Dirección:</td>
-                        </tr>
-                        <tr>
                             <td><h:inputText value="#{perfil.email}"></h:inputText></td>
-                            <td><h:inputText value="#{perfil.direccion}"></h:inputText></td>
                         </tr>
                         <tr>
                             <td>Teléfono:</td>
+                            <td>Dirección:</td>
                         </tr>
                         <tr>
                             <td><h:inputText value="#{perfil.telefono}"></h:inputText></td>
-                        </tr>    
+                            <td><h:inputText value="#{perfil.direccion}"></h:inputText></td>
+                        </tr> 
                     </table> 
                     <p id="boton-submit-perfil">
                         <h:button class="ColorBoton" value="Aplicar cambios" outcome="perfil-educando.xhtml"/>
