@@ -26,7 +26,7 @@ public class Login {
     private String usuario;
     private String contrasenia;
     private List<Usuario> usuarios;
-    
+
     @Inject
     private ControlInicio ctrl;
 
@@ -35,9 +35,9 @@ public class Login {
      */
     public Login() {
         usuarios = new ArrayList<Usuario>();
-        usuarios.add(new Usuario(1,"pepe", "asdf",Usuario.PERF_ADMIN));
-        usuarios.add(new Usuario(2,"manolo", "qwer",Usuario.PERF_COORD));
-        usuarios.add(new Usuario(3,"jose","jose",Usuario.PERF_EDUCANDO));
+        usuarios.add(new Usuario(1, "pepe", "asdf", Usuario.PERF_ADMINISTRADOR));
+        usuarios.add(new Usuario(2, "manolo", "qwer", Usuario.PERF_COORDINADOR));
+        usuarios.add(new Usuario(3, "jose", "jose", Usuario.PERF_EDUCANDO));
     }
 
     public String getUsuario() {
@@ -61,29 +61,28 @@ public class Login {
         Iterator it = usuarios.iterator();
         boolean encontrado = false;
         Usuario user = null;
-        while(it.hasNext() && !encontrado){
+        while (it.hasNext() && !encontrado) {
             user = (Usuario) it.next();
-            if(user.getUsuario().equals(usuario))
-                encontrado = true;    
+            if (user.getUsuario().equals(usuario)) {
+                encontrado = true;
+            }
         }
-        if(user!=null){
-             if(user.getContrasenia().equals(contrasenia)){
-                 ctrl.setUsuario(user);
-                 return ctrl.clickLinkInicio();      
-            }else if (!user.getContrasenia().equals(contrasenia)){
+        if (user != null) {
+            if (user.getContrasenia().equals(contrasenia)) {
+                ctrl.setUsuario(user);
+                return ctrl.clickLinkInicio();
+            } else if (!user.getContrasenia().equals(contrasenia)) {
                 FacesContext ctx = FacesContext.getCurrentInstance();
                 ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "ContraseÃ±a no valida", "ContraseÃ±a no valida"));
                 return null;
-            }else{
+            } else {
                 FacesContext ctx = FacesContext.getCurrentInstance();
                 ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario no valido", "Usuario no valido"));
                 return null;
             }
-        
-        
-        }else{
-            return null;   
-        }   
-    }
-}  
 
+        } else {
+            return null;
+        }
+    }
+}
