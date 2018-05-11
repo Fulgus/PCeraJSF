@@ -35,10 +35,10 @@ public class Login {
      */
     public Login() {
         usuarios = new ArrayList<Usuario>();
-        usuarios.add(new Usuario(1,"pepe", "asdf",Usuario.PERF_ADMINISTRADOR));
-        usuarios.add(new Usuario(2,"manolo", "qwer",Usuario.PERF_COORDINADOR));
-        usuarios.add(new Usuario(3,"jose","jose",Usuario.PERF_SCOUTER));
-        usuarios.add(new Usuario(4,"marcos","marcos",Usuario.PERF_EDUCANDO));
+        usuarios.add(new Usuario(1,"admin", "admin",Usuario.PERF_ADMINISTRADOR));
+        usuarios.add(new Usuario(2,"coor", "coor",Usuario.PERF_COORDINADOR));
+        usuarios.add(new Usuario(3,"scouter","scouter",Usuario.PERF_SCOUTER));
+        usuarios.add(new Usuario(4,"educando","educando",Usuario.PERF_EDUCANDO));
 
     }
 
