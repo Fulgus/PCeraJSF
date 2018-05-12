@@ -38,10 +38,11 @@ public class Cuota implements Serializable {
     public Cuota() {
     }
 
-    public Cuota(Usuario iUsuario, Integer estado, Date fecha) {
+    public Cuota(Usuario iUsuario, Integer estado, Date fecha, Integer importe) {
         this.usuarioIdUsuario = iUsuario;
         this.estado = estado;
         this.fecha = fecha;
+        this.importe = importe;
     }
 
     public Cuota(Integer idCuota) {
