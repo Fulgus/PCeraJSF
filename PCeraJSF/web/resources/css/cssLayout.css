@@ -82,6 +82,7 @@ ul.menulist li {
     width: 100%;
     color: white;
     text-align: center;
+    position: static;
 }
 
 #PagCuo_CenTxt{
