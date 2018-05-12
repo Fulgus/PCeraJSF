@@ -133,9 +133,10 @@ ul.menulist li {
     border: 1px solid black;
 }
 
-.tabla-gest-user table{
+.tabla-gest-user{
     border-collapse: collapse;
     border-spacing: 0;
+    width: 100%;
 }
 
 #radio-privilegios{
@@ -226,4 +227,24 @@ ul.menulist li {
 
 #perfilheader{
     margin-left: 7%;
+}
+
+.tabla-users th {
+    background-color: #D3D3D3;
+}
+
+.tabla-users table {
+    width: 100%;
+}
+
+.tabla-users {
+    align-content: center;
+}
+
+.tabla-users td, .tabla-users tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 20%;
+    text-align: center;
 }
