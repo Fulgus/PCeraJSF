@@ -33,6 +33,7 @@ public class PerfilBean {
     private Date fecha_jura_bandera;
     private Date fecha_alta;
     private String telefono;
+    private String url_imagen;
     /**
      * Creates a new instance of PerfilBean
      */
@@ -54,6 +55,11 @@ public class PerfilBean {
         this.fecha_nacimiento =  new Date("5/12/1999");
         this.fecha_jura_bandera = new Date("2/15/2015");
         this.fecha_alta = new Date("10/30/2014");
+    }
+    
+    public String getImagen(){
+        //imagen por defecto por ahora.
+        return "img-profile.png";
     }
     
     public Usuario getMiembro(){

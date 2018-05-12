@@ -24,7 +24,7 @@ and open the template in the editor.
             <div id="div-perfil"> 
              <table cellspan="5">
                 <tr>
-                  <td rowspan="2"><img src="img-profile.png" id="fotoperfil"/></td>
+                  <td rowspan="2"><h:graphicImage id="fotoperfil" value="#{perfil.getImagen()}" /></td>
                   <c:if test ="#{controlInicio.getUsuario().getTipoUsuario() == 0}">
                     <td>-<h:link value="Asignación de privilegios" outcome="privilegios.xhtml"/></td>
                   </c:if>
