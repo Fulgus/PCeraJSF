@@ -24,8 +24,12 @@
                                 <ul class="menulist">
                                     <li><h:commandLink action="#{controlInicio.clickLinkInicio()}" value="Inicio"/></li>
                                     <li><h:commandLink action="#{controlInicio.clickLinkInformacion()}" value="Información"/></li>
+                                    <c:if test="#{empty controlInicio.usuario}">
                                     <li><h:commandLink action="#{controlInicio.clickLinkApuntate()}" value="Apuntate"/></li>
+                                    </c:if>
+                                    <c:if test="#{!empty controlInicio.usuario}">
                                     <li><h:commandLink action="#{controlInicio.clickLinkEventos()}" value="Eventos"/></li>
+                                    </c:if>
                                     <c:if test="#{empty controlInicio.usuario}">
                                         <li class="sesion"><h:commandLink action="#{controlInicio.clickLinkLogin()}" value="Inicio de Sesión"/></li>
                                     </c:if>
