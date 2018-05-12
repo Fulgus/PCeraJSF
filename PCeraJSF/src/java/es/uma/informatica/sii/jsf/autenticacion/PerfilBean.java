@@ -148,7 +148,7 @@ public class PerfilBean {
         this.fecha_alta = fecha_alta;
     }
     
-        public String mostrarFecha_juraBand(){
+    public String mostrarFecha_juraBand(){
         SimpleDateFormat df = new SimpleDateFormat ("dd/MM/yyyy");
         String fecha = df.format(fecha_jura_bandera);
         return fecha;
