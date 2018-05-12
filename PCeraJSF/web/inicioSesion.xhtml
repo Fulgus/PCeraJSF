@@ -11,19 +11,19 @@
         <ui:define name="contenido">
         <c:choose>
             <c:when test="#{empty controlAutorizacion.usuario}">
-                <h:form id="login">
-                    <table>
+                <h:form id="login" style="align-content: center" >
+                    <table align="center" >
                         <tr>
-                            <td>Usuario: </td>
+                            <td><h2>Usuario:</h2> </td>
                             <td><h:inputText value="#{login.usuario}"/></td>
                         </tr>
                         <tr>
-                            <td>Contraseña: </td>
+                            <td><h2>Contraseña:</h2> </td>
                             <td><h:inputSecret value="#{login.contrasenia}"/></td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <h:commandButton value="Autenticar" action="#{login.autenticar()}"/>
+                                <h:commandButton class="ColorBoton" value="Autenticar" action="#{login.autenticar()}"/>
                             </td>
                         </tr>
                     </table>

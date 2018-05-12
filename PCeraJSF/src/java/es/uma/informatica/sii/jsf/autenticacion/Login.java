@@ -75,7 +75,7 @@ public class Login {
                 return ctrl.clickLinkInicio();
             } else if (!user.getContrasenia().equals(contrasenia)) {
                 FacesContext ctx = FacesContext.getCurrentInstance();
-                ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "ContraseÃ±a no valida", "ContraseÃ±a no valida"));
+                ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Contraseña no valida", "ContraseÃ±a no valida"));
                 return null;
             } else {
                 FacesContext ctx = FacesContext.getCurrentInstance();
