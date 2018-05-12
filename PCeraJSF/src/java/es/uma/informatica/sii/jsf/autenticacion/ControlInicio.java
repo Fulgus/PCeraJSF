@@ -68,7 +68,7 @@ public class ControlInicio implements Serializable {
         FacesContext ctx = FacesContext.getCurrentInstance();
         ctx.getExternalContext().invalidateSession();
         usuario = null;
-        return "inicio.xhtml";
+        return "inicioSesion.xhtml";
     }
 
     //Crea una nueva instancia de ControlInicio
