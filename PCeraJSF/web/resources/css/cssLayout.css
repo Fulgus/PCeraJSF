@@ -125,21 +125,21 @@ ul.menulist li {
     height: 50%;
 }
 
-#boton-aniadir-user{
+#boton_aniadir_user{
     text-align: center;
 }
 
-.tabla-gest-user th, .tabla-gest-user td{
+.tabla_gest_user th, .tabla_gest_user td{
     border: 1px solid black;
 }
 
-.tabla-gest-user{
+.tabla_gest_user{
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
 }
 
-#radio-privilegios{
+#radio_privilegios{
     margin: 10px 10px 0px 0px;
 }
 
@@ -185,7 +185,7 @@ ul.menulist li {
     width: 75%;
 }
 
-#div-modificar-perfil{
+#div_modificar_perfil{
     font-size: 16px;
 }
 
@@ -216,12 +216,12 @@ ul.menulist li {
     max-width: 50%;
 }
 
-#div-perfil-educando{
+#div_perfil_educando{
     text-align: center;
     font-size: 20px;
 }
 
-#div-perfil-educando table{
+#div_perfil_educando table{
     width: 80%;
 }
 
@@ -229,19 +229,19 @@ ul.menulist li {
     margin-left: 7%;
 }
 
-.tabla-users th {
+.tabla_users th {
     background-color: #D3D3D3;
 }
 
-.tabla-users table {
+.tabla_users table {
     width: 100%;
 }
 
-.tabla-users {
+.tabla_users {
     margin: 0 auto;
 }
 
-.tabla-users td, .tabla-users tr{
+.tabla_users td, .tabla_users tr{
     border: 1px solid black;
     border-collapse: collapse;
     border-spacing: 0;
