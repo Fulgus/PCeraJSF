@@ -11,12 +11,15 @@
         <ui:define name="contenido">
             <h:form>
                 <a href= "perfil-administrador.xhtml" ><img id="foto_cerrar_pest" src = "Close_Box_Red.png"></img></a>
-                <h:dataTable class="tableGestCuo" value="#{controlPerfilAdministrador.getListaEducandos()}" var="u">
+                <h:dataTable value="#{controlPerfilAdministrador.getListaEducandos()}" var="u"
+                             styleClass = "tabla-datos-verde"
+                             headerClass = "tabla-datos-verde-header"
+                             rowClasses = "tabla-datos-verde-fila-impar,tabla-datos-verde-fila-par">
                     <h:column>
                         <f:facet name="header">ID</f:facet>
                         <h:outputText value="#{u.idUsuario}"/>
                     </h:column>
-                    
+
                     <h:column>
                         <f:facet name="header">Usuario</f:facet>
                         <h:outputText value="#{u.usuario}"/>

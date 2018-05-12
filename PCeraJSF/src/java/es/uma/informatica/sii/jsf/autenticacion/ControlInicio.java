@@ -58,11 +58,11 @@ public class ControlInicio implements Serializable {
 
         switch (usuario.getTipoUsuario()) {
             case 0:
-                return "perfil-administrador.xhtml";
+                return "perfilAdministrador.xhtml";
             case 1:
-                return "perfil-administrador.xhtml";
+                return "perfilAdministrador.xhtml";
             default:
-                return "perfil-educando.xhtml";
+                return "perfilEducando.xhtml";
         }
 
     }

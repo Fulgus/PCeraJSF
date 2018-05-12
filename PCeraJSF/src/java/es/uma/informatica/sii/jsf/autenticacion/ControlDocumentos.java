@@ -33,7 +33,7 @@ public class ControlDocumentos {
     }
     
     public String volverPerfil(){
-        return "perfil-educando.xhtml";
+        return "perfilEducando.xhtml";
     }
     
     public String subirDoc(){

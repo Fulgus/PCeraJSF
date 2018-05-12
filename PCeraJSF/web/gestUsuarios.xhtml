@@ -15,7 +15,7 @@ and open the template in the editor.
         <ui:define name="title">Gestión de usuarios</ui:define>
         <ui:define name="contenido">
             <h:form>
-                <h:dataTable styleClass="tabla-users" value="#{controlPerfilAdministrador.listaEducandos}" var="d">
+                <h:dataTable styleClass="tabla_users" value="#{controlPerfilAdministrador.listaEducandos}" var="d">
                     <h:column>
                         <f:facet name="header">ID</f:facet>
                         <h:outputText value="#{d.idUsuario}"/>
