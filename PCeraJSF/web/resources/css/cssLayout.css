@@ -238,7 +238,7 @@ ul.menulist li {
 }
 
 .tabla-users {
-    align-content: center;
+    margin: 0 auto;
 }
 
 .tabla-users td, .tabla-users tr{
