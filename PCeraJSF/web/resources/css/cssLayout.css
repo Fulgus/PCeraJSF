@@ -190,22 +190,22 @@ ul.menulist li {
 }
 
 #input:invalid {
-  border: 1px solid red;
+    border: 1px solid red;
 }
 
 #input:valid {
-  border: 1px solid green;
+    border: 1px solid green;
 }
 #popup
-   {
-      position: absolute;
-      border: 1px solid #666666;
-      background-color:#F7F7F7;
-      width: 200px;
-      height: 100px;
-      margin-top: 50px;
-     margin-left: 40%;
-   }
+{
+    position: absolute;
+    border: 1px solid #666666;
+    background-color:#F7F7F7;
+    width: 200px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 40%;
+}
 
 .disabled {
     opacity: 0.6;
@@ -247,4 +247,32 @@ ul.menulist li {
     border-spacing: 0;
     width: 20%;
     text-align: center;
+}
+
+/*Formato tabla JSF Motivos verdes*/
+.tabla-datos-verde {
+    border-collapse:collapse;
+    /*border:1px solid green;*/
+
+}
+
+.tabla-datos-verde-header {
+    text-align:center;
+    background:none repeat scroll 0 0 green;
+    color:white; 
+    padding:2px;
+}
+
+.tabla-datos-verde-fila-impar {
+    padding: 0.3em;
+    border:1px solid green;
+    text-align:center;
+    background:none repeat scroll 0 0 white;	
+}
+
+.tabla-datos-verde-fila-par {
+    padding: 0.3em;
+    border:1px solid green;
+    text-align:center;
+    background:none repeat scroll 0 0 #ddffdd;
 }
