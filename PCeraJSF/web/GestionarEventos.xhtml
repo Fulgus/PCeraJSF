@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
+        <ui:define name="title">Gestión Cuota</ui:define>
+        <ui:define name="contenido">
+            <h:form>
+                <a href= "perfil-administrador.xhtml" ><img id="foto_cerrar_pest" src = "Close_Box_Red.png"></img></a>
+                <h:dataTable class="tableGestCuo" value="#{EventoBean.getEventos()}" var="u"></h:dataTable>
+            </h:form>
+            <h1 align="center">Eventos</h1>
+            <br />
+            <table class="tableGestCuo" align="center">
+                <thead>
+                    <tr class="trGC"><th class="thGC">Nombre evento</th><th class="thGC"></th><th class="thGC">Asistentes</th></tr>
+                </thead>
+                <body>
+                    <tr class="trGC"><td class="tdGC">Excursión con burros</td><td class="tdGC"><a href="evento.xhtml">Ver</a></td><td class="tdGC">35/40</td></tr>
+                    <tr class="trGC2"><td class="tdGC">Visita a la mezquita de Polonia</td><td class="tdGC" ><a href="evento.xhtml">Ver</a></td><td class="tdGC">50/50</td></tr>
+                    <tr class="trGC"><td class="tdGC">Acampada en vías de tren</td><td class="tdGC"><a href="evento.xhtml">Ver</a></td><td class="tdGC">40/100</td></tr>
+                    <tr class="trGC2"><td class="tdGC">Taller de enderezamiento de platanos</td><td class="tdGC"><a href="evento.xhtml">Ver</a></td><td class="tdGC">16/35</td></tr>
+                </body>
+            </table>
+            <br/><br/><br/>
+        </ui:define>
+    </ui:composition>
+</html>
