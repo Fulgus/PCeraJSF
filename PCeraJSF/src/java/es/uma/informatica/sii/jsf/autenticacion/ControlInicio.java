@@ -27,6 +27,10 @@ public class ControlInicio implements Serializable {
     public Usuario getUsuario() {
         return usuario;
     }
+    
+    public int getUsuarioId(){
+        return usuario.getIdUsuario();
+    }
 
     //Control de los diferentes botones de la plantilla
     public String clickLinkInformacion() {

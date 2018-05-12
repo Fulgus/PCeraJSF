@@ -6,6 +6,7 @@ package es.uma.informatica.sii.jsf.autenticacion;
  * and open the template in the editor.
  */
 import es.uma.informatica.sii.jsf.autenticacion.modelo.Documento;
+import es.uma.informatica.sii.jsf.autenticacion.modelo.Cuota;
 import es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
@@ -24,6 +25,7 @@ public class controlPerfilAdministrador implements Serializable {
     
     private List<Usuario> l = new ArrayList<>();
     private List<Documento> d = new ArrayList<>();
+    private List<Cuota> c = new ArrayList<>();
     private Integer idUserDocumentos;
     
     public controlPerfilAdministrador() {
@@ -41,16 +43,33 @@ public class controlPerfilAdministrador implements Serializable {
         d.add(new Documento(1, "DNI", new Date(2001, 2, 2), 1));
         d.add(new Documento(2, "Foto", new Date(2001, 2, 2), 1));
         d.add(new Documento(3, "Recibo", new Date(2001, 2, 2), 1));
-        d.add(new Documento(4, "Factura", new Date(2001, 2, 2), 1));
+        d.add(new Documento(4, "Factura", new Date(2001, 2, 2), 1)); 
+        
+        c.add(new Cuota(l.get(0),1, new Date(2002, 2, 2)));
+        c.add(new Cuota(l.get(1),1,null));
+        c.add(new Cuota(l.get(2),1, null));
+        c.add(new Cuota(l.get(3),1, new Date(2002, 8, 7)));
+
+        
+       
+        
     }
     
     public List<Usuario> getListaEducandos() {
         return l;
     }
     
+    public List<Cuota> getListaCuota() {
+        return c;
+    }
+    
     public String clickVerDocumentacion(Integer idUser) {
         this.setIdUserDocumentos(idUser);
         return "gestionDocumentacionDocumentos.xhtml";
+    }
+
+    public String clickEnviarIRPF() {
+        return "EnvioIRPF.xhtml";
     }
     
     public List<Documento> getListaDocumentosDeUsuario() {

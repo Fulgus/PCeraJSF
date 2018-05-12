@@ -9,6 +9,7 @@
     <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
         <ui:define name="title">Pagar Cuota</ui:define>
         <ui:define name="contenido">
+            <h:form>
             <h1 id="PagCuo_MovTi">Pagar Cuota</h1>
             <h2 id="PagCuo_MovTi">Precio  : X€</h2>
             <h2 id="PagCuo_CenTxt">Metodo de pago</h2>
@@ -25,10 +26,11 @@
             </table>
             <br/>
             <table style="padding-left:  40%">
-                <tr><td><h:button class="ColorBoton" outcome="perfil-educando.xhtml" value="Aceptar"></h:button></td>
-                    <td><h:button style="margin-left:  60%" class="ColorBoton" outcome="perfil-educando.xhtml" value="Atras"></h:button></td></tr>
+                <tr><td><h:commandButton class="ColorBoton" action="#{controlCuota.btnAtrasMetPag()}" value="Aceptar"></h:commandButton></td>
+                    <td><h:commandButton style="margin-left:  60%" class="ColorBoton" action="#{controlCuota.btnAceptarMetPag()}" value="Atras"></h:commandButton>button></td></tr>
             </table>
             <br/><br/><br/>
+        </h:form>
         </ui:define>
     </ui:composition>
 </html>

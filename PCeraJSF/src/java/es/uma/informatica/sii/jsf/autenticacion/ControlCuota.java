@@ -8,6 +8,7 @@ package es.uma.informatica.sii.jsf.autenticacion;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 import java.util.Date;
+import javax.inject.Inject;
 
 /**
  *
@@ -24,6 +25,8 @@ public class ControlCuota {
     
     }
         
+    
+    
     public double getImporte() {
         return importe;
     }
