@@ -9,6 +9,7 @@ import es.uma.informatica.sii.jsf.autenticacion.modelo.Evento;
 import es.uma.informatica.sii.jsf.autenticacion.modelo.Seccion;
 import es.uma.informatica.sii.jsf.autenticacion.modelo.Usuario;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
@@ -36,7 +37,29 @@ public class EventoBean {
      * Creates a new instance of EventoBean
      */
     public EventoBean() {
+            
+         Evento e1=new Evento();
+         
+         e1.setNombre("feria Malaga");
+       
+         e1.setSeccion("tropa");
+         e1.setPrecio(1);
+         e1.setDescripcion("Traerse arandanos");
+         e1.setUbicacon("Malaga La Bella");
+         e1.setIdEvento(cont);
+         ev.add(e1);
+        
     }
+    
+    
+        
+              
+        
+       // e1.setId_evento(contId);
+        
+        //contId++;
+        //ev.add(e1);
+    
 
     public String editarEvento() {
         System.out.println(seleccionado.getIdEvento());
