@@ -15,7 +15,7 @@
                   <h:form> 
                       <p:dataScroller value="#{eventoBean.getEventos()}" var="evento">
                           <f:facet name="header">
-                            Evento
+                            Eventos
                           </f:facet>
 
                      <f:facet name="loader">
@@ -41,6 +41,7 @@
                                      <h:outputText value="#{evento.precio}" style="font-weight: bold"/>
                                     
                                 </h:panelGrid>
+                                <br/>
                             </p:outputPanel>
                           </h:panelGrid>
                       </p:dataScroller>

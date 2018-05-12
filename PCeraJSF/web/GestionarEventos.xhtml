@@ -4,29 +4,53 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
-        <ui:define name="title">Gestión Cuota</ui:define>
-        <ui:define name="contenido">
-            <h:form>
-                <a href= "perfil-administrador.xhtml" ><img id="foto_cerrar_pest" src = "Close_Box_Red.png"></img></a>
-                <h:dataTable class="tableGestCuo" value="#{EventoBean.getEventos()}" var="u"></h:dataTable>
-            </h:form>
-            <h1 align="center">Eventos</h1>
-            <br />
-            <table class="tableGestCuo" align="center">
-                <thead>
-                    <tr class="trGC"><th class="thGC">Nombre evento</th><th class="thGC"></th><th class="thGC">Asistentes</th></tr>
-                </thead>
-                <body>
-                    <tr class="trGC"><td class="tdGC">Excursión con burros</td><td class="tdGC"><a href="evento.xhtml">Ver</a></td><td class="tdGC">35/40</td></tr>
-                    <tr class="trGC2"><td class="tdGC">Visita a la mezquita de Polonia</td><td class="tdGC" ><a href="evento.xhtml">Ver</a></td><td class="tdGC">50/50</td></tr>
-                    <tr class="trGC"><td class="tdGC">Acampada en vías de tren</td><td class="tdGC"><a href="evento.xhtml">Ver</a></td><td class="tdGC">40/100</td></tr>
-                    <tr class="trGC2"><td class="tdGC">Taller de enderezamiento de platanos</td><td class="tdGC"><a href="evento.xhtml">Ver</a></td><td class="tdGC">16/35</td></tr>
-                </body>
-            </table>
-            <br/><br/><br/>
-        </ui:define>
-    </ui:composition>
+  <ui:composition template="./WEB-INF/templates/plantilla.xhtml">
+    <ui:define name="title">Evento</ui:define>
+        
+        
+            <ui:define name="contenido">
+
+                  <h:form> 
+                      <p:dataScroller value="#{eventoBean.getEventos()}" var="evento">
+                          <f:facet name="header">
+                            Eventos
+                          </f:facet>
+
+                     <f:facet name="loader">
+                            <p:commandButton type="button" value="Más" icon="ui-icon-circle-triangle-s"/>
+                        </f:facet>
+
+                          <h:panelGrid columns="2" style="width:100%" >
+                            <p:outputPanel>
+                                <h:panelGrid columns="2" cellpadding="5">
+                                    <h:outputText value="Nombre:" />
+                                    <h:commandLink value="#{evento.nombre}" action="#{eventoBean.ver(evento)}" style="font-weight: bold"/>
+
+                                    <h:outputText value="Fecha:" />
+                                    <h:outputText value="#{evento.seccion}" style="font-weight: bold"/>
+
+                                    <h:outputText value="Descripción:" />
+                                    <h:outputText value="#{evento.descripcion}" style="font-weight: bold"/>
+                                    
+                                    <h:outputText value="Seccion:" />
+                                    <h:outputText value="#{evento.seccion}" style="font-weight: bold"/>
+                                    
+                                     <h:outputText value="Precio:" />
+                                     <h:outputText value="#{evento.precio}" style="font-weight: bold"/>
+                                     
+                                     <tr><td><h:button class="ColorBoton" outcome="modificarEvento.xhtml" value="Modificar"></h:button></td></tr>
+                                    
+                                </h:panelGrid>
+                                <br/>
+                            </p:outputPanel>
+                          </h:panelGrid>
+                      </p:dataScroller>
+                </h:form>
+                
+                
+            </ui:define>
+  </ui:composition>
+
 </html>

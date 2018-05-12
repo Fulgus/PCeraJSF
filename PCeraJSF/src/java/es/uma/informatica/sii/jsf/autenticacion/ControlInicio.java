@@ -44,6 +44,10 @@ public class ControlInicio implements Serializable {
     public String clickLinkLogin() {
         return "inicioSesion.xhtml";
     }
+    
+    public String clickLinkEventos() {
+        return "Listaeventos.xhtml";
+    }
 
     //Al pulsar el botón perfil (hay que estar logeado para que aparezca) elige a que tipo de perfil entra en funcion del usuario logeado
     public String clickLinkPerfil() {
