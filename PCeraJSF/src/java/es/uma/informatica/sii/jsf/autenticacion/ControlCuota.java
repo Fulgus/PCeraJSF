@@ -96,11 +96,11 @@ public class ControlCuota {
     }
     
     public String btnAceptarMetPag(){
-        return "perfil-educando.xhtml";
+        return "perfilEducando.xhtml";
     }
     
     public String btnAtrasMetPag(){
-        return "perfil-educando.xhtml";
+        return "perfilEducando.xhtml";
     }
 }
     
