@@ -45,10 +45,10 @@ public class controlPerfilAdministrador implements Serializable {
         d.add(new Documento(3, "Recibo", new Date(2001, 2, 2), 1));
         d.add(new Documento(4, "Factura", new Date(2001, 2, 2), 1)); 
         
-        c.add(new Cuota(l.get(0),1, new Date(2014, 2, 2),30));
-        c.add(new Cuota(l.get(1),1, new Date(2015, 6, 2),35));
-        c.add(new Cuota(l.get(2),1, new Date(2016, 4, 5),30));
-        c.add(new Cuota(l.get(3),1, new Date(2017, 8, 7),32));
+        c.add(new Cuota(l.get(0),1, new Date("5/12/2014"),30));
+        c.add(new Cuota(l.get(1),1, new Date("5/12/2015"),35));
+        c.add(new Cuota(l.get(2),1, new Date("5/12/2016"),30));
+        c.add(new Cuota(l.get(3),1, new Date("5/12/2017"),32));
         
     }
     

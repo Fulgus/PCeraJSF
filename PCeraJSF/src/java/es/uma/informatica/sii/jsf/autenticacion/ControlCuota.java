@@ -37,10 +37,10 @@ public class ControlCuota {
         l.add(new Usuario(5, "TheCook", "2018", "Adolfo", "García", "23412332R", new Date(1999, 5, 12), Usuario.PERF_EDUCANDO, "mail@mail.com", "casa, 4", "mucho"));
         l.add(new Usuario(6, "JijiNoseMeOcurreMas", "2019", "Lucia", "García", "23412332R", new Date(1999, 5, 12), Usuario.PERF_EDUCANDO, "mail@mail.com", "casa, 4", "mucho"));
         
-        c.add(new Cuota(l.get(0),1, new Date("5/12/14"),30));
-        c.add(new Cuota(l.get(1),1, new Date("5/12/15"),35));
-        c.add(new Cuota(l.get(2),1, new Date("4/5/16"),30));
-        c.add(new Cuota(l.get(3),1, new Date("12/3/18"),32));
+        c.add(new Cuota(l.get(0),1, new Date("5/12/2014"),30));
+        c.add(new Cuota(l.get(1),1, new Date("5/12/2015"),35));
+        c.add(new Cuota(l.get(2),1, new Date("5/12/2016"),30));
+        c.add(new Cuota(l.get(3),1, new Date("5/12/2017"),32));
     }
     
     public String anioFecha(Date d){
